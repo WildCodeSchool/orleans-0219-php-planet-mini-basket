@@ -7,14 +7,18 @@
 
     <title>{% block title %}{% endblock %}</title>
 
+    <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     {% block stylesheet %}{% endblock %}
-    <link rel="icon" href="/assets/images/favicon.png">
+    <link rel="icon" href="../public/assets/images/favicon.png">
 </head>
+{% include '_navbar.html.twig' %}
 
 <body>
 
 {% block content %}{% endblock %}
+
+{% include '_footer.html.twig' %}
 {% block javascript %}{% endblock %}
 </body>
 </html>
