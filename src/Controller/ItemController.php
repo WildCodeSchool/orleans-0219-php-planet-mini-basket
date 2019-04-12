@@ -35,14 +35,6 @@ class ItemController extends AbstractController
         return $this->twig->render('Item/index.html.twig', ['items' => $items]);
     }
 
-    public function index()
-    {
-        $itemManager = new ItemManager();
-        $items = $itemManager->selectAll();
-
-        return $this->twig->render('Item/banner.html.twig', ['items' => $items]);
-    }
-
 
     /**
      * Display item informations specified by $id
