@@ -1,0 +1,31 @@
+.info-header{
+    text-align: center;
+    font-size: 2em;
+}
+
+.fa-heart{
+    font-size: 3em;
+    padding-bottom: 15px;
+}
+
+.fa-basketball-ball{
+    font-size: 3em;
+    padding-bottom: 15px;
+}
+
+.fa-child{
+    font-size: 3em;
+    padding-bottom: 15px;
+}
+
+.info-text{
+    text-align: center;
+}
+
+.info-text-children{
+    margin-top: 1vw;
+}
+
+.border{
+    border: #60A9C3;
+}
