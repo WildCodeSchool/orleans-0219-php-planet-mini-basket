@@ -4,8 +4,9 @@
     background-image: url("https://cdn.pixabay.com/photo/2018/03/26/14/07/space-3262811_960_720.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 20vw;
+    height: 30vw;
     filter: brightness(0.95);
+    margin-top: 7vw;
 }
 
 .banner-title{
