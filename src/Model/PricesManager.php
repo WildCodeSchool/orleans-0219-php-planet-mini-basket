@@ -17,7 +17,7 @@ class PricesManager extends AbstractManager
     /**
      *
      */
-    const TABLE = 'prices';
+    const TABLE = 'sport_camp';
 
     /**
      *  Initializes this class.
