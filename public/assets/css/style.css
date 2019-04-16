@@ -1,4 +1,4 @@
-.banner{
+.banner {
     position: relative;
     width: 100%;
     background-image: url("https://cdn.pixabay.com/photo/2018/03/26/14/07/space-3262811_960_720.jpg");
@@ -15,10 +15,41 @@
     font-size: 5vw;
 }
 
-.banner-text{
+.banner-text {
     top: 17vw;
     position: absolute;
     font-size: 2.5vw;
     color: black;
     opacity: 0.8;
+}
+
+section{
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
+.info-header{
+    text-align: center;
+    font-size: 2em;
+}
+
+.icon-info{
+    font-size: 3em;
+    padding-bottom: 15px;
+}
+
+.info-text{
+    text-align: center;
+}
+
+.info-text-children{
+    margin-top: 1vw;
+}
+
+.border{
+    border: #60A9C3;
+}
+
+.card-info{
+    max-width: 20rem;
 }
