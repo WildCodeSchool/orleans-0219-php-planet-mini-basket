@@ -49,3 +49,7 @@ section{
 .border{
     border: #60A9C3;
 }
+
+.card-info{
+    max-width: 20rem;
+}
