@@ -30,9 +30,9 @@ class PricesController extends AbstractController
     public function index()
     {
         $pricesManager = new PricesManager();
-        $sportCamp = $pricesManager->selectAll();
+        $prices = $pricesManager->selectAll();
 
-        return $this->twig->render('Prices/index.html.twig', ['sport_camp' => $sportCamp]);
+        return $this->twig->render('Prices/index.html.twig', ['prices' => $prices]);
     }
 
     /**

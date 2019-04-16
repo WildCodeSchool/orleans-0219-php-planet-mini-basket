@@ -1,5 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-
+    {% for price in prices %}
+        <p>{{ price.id }}</p>
+    {% endfor %}
 {% endblock %}
