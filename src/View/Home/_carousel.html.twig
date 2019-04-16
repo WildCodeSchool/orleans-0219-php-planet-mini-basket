@@ -1,0 +1,28 @@
+<section>
+    <h2 class="mb-1 text-center" >Nos Actualités</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                    <ol class="carousel-indicators">
+                        {% for newsContent in news %}
+                        <li data-target="#quote-carousel" data-slide-to="{{ loop.index0 }}"{{ loop.first ? 'class=active' }}></li>
+                        {% endfor %}
+                    </ol>
+                    <div class="carousel-inner">
+                        {% for newsContent in news %}
+                        <div class="item {{ loop.first ? 'active' }}">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h3>{{ newsContent.news_title }}</h3>
+                                    <p>{{ newsContent.news_content }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
