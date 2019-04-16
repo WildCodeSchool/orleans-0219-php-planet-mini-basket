@@ -17,10 +17,6 @@
     position: absolute;
     bottom: 60%;
     left: 42%;
-    -webkit-transform: rotate(270deg);
-    -moz-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
     transform: rotate(270deg);
 }
 .trainer .title h3 {
