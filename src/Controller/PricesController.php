@@ -20,7 +20,7 @@ class PricesController extends AbstractController
 
 
     /**
-     * Display item listing
+     * Display prices listing
      *
      * @return string
      * @throws \Twig\Error\LoaderError
@@ -36,7 +36,7 @@ class PricesController extends AbstractController
     }
 
     /**
-     * Display item informations specified by $id
+     * Display prices informations specified by $id
      *
      * @param int $id
      * @return string
