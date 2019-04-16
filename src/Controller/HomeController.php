@@ -27,6 +27,4 @@ class HomeController extends AbstractController
         $newsContent = $newsManager->selectAll();
         return $this->twig->render('Home/index.html.twig', ['news' => $newsContent]);
     }
-
-
 }
