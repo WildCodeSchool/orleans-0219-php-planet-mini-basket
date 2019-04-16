@@ -1,1 +1,21 @@
 {% extends 'layout.html.twig' %}
+{% block content %}
+    <section class="stage">
+    <h1 class="text-center">Nos Stages</h1>
+    <ul class="nav nav-tabs">
+        {% for stage in stages %}
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#stage{{ stage.id }}">{{ stage.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        {% for stage in stages %}
+            <div class="tab-pane fade {{ loop.first  ? 'active show' }}" id="stage{{ stage.id }}">
+
+                    <p>{{ stage.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    </section>
+{% endblock %}
