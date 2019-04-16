@@ -1,7 +1,44 @@
 {% extends 'layout.html.twig' %}
 
+{% block title %}Tarifs{% endblock %}
+
 {% block content %}
-    {% for price in prices %}
-        <p>{{ price.id }}</p>
-    {% endfor %}
+    <h1>TARIFS</h1>
+    <main class="container">
+        <div class="row">
+            {% for price in prices %}
+                <div class="col-3">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">{{ price.name }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Prix journée : {{ price.price }} &euro;</td>
+                        </tr>
+                        <tr>
+                            <td>Période : {{ price.period }}</td>
+                        </tr>
+                        <tr>
+                            <td>{% if price.included_meal == 1 %}
+                                    Goûter inclus
+                                {% else %}
+                                    Goûter non inclus
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{% if price.start_date is not empty %}
+                                    Du {{ price.start_date }} au {{ price.end_date }}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
 {% endblock %}
