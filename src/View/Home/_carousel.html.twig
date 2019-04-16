@@ -1,9 +1,9 @@
-<section>
+<section class="news">
     <h2 class="mb-1 text-center" >Nos Actualités</h2>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                <div class="carousel slide quote-carousel" data-ride="carousel" id="quote-carousel">
                     <ol class="carousel-indicators">
                         {% for newsContent in news %}
                         <li data-target="#quote-carousel" data-slide-to="{{ loop.index0 }}"{{ loop.first ? 'class=active' }}></li>
