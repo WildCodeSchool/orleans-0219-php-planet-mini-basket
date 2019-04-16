@@ -3,22 +3,21 @@
 {% block title %}Tarifs{% endblock %}
 
 {% block content %}
-    <h1>TARIFS</h1>
-    <main class="container">
+        <h1 class="tarifs">TARIFS</h1>
         <div class="row">
             {% for price in prices %}
-                <div class="col-3">
+                <div class="col-4">
                     <table class="table table-striped">
                         <thead>
-                        <tr>
-                            <th scope="col">{{ price.name }}</th>
+                        <tr  class="table-success text-center tarifsTHead">
+                            <th scope="col">{{ price.name | upper}}</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>Prix journée : {{ price.price }} &euro;</td>
                         </tr>
-                        <tr>
+                        <tr class="table-info">
                             <td>Période : {{ price.period }}</td>
                         </tr>
                         <tr>
@@ -29,7 +28,7 @@
                                 {% endif %}
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="table-info">
                             <td>{% if price.start_date is not empty %}
                                     Du {{ price.start_date }} au {{ price.end_date }}
                                 {% endif %}
@@ -40,5 +39,4 @@
                 </div>
             {% endfor %}
         </div>
-    </main>
 {% endblock %}
