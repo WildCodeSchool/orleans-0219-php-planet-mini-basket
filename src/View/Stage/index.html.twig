@@ -2,17 +2,18 @@
 {% block content %}
     <section class="stage">
     <h1 class="text-center">Nos Stages</h1>
-    <ul class="nav nav-tabs">
+        <ul class="row justify-content-center nav nav-tabs">
         {% for stage in stages %}
             <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#stage{{ stage.id }}">{{ stage.name }}</a>
             </li>
         {% endfor %}
     </ul>
-    <div id="myTabContent" class="tab-content">
+    <div id="myTabContent" class="tab-content jumbotron ">
         {% for stage in stages %}
             <div class="tab-pane fade {{ loop.first  ? 'active show' }}" id="stage{{ stage.id }}">
-
+                <h4 class=" breadcrumb col-3 offset-5 row justify-content-center">Date de debut {{ stage.start_date }}</h4>
+                <h4 class=" breadcrumb col-3 offset-5 row justify-content-center">Date de fin {{ stage.end_date }}</h4>
                     <p>{{ stage.description }}</p>
             </div>
         {% endfor %}
