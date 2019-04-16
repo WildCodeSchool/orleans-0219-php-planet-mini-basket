@@ -1,22 +1,39 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
     <section class="stage">
-    <h1 class="text-center">Nos Stages</h1>
+        <h1 class="text-center">Nos Stages</h1>
         <ul class="row justify-content-center nav nav-tabs">
-        {% for stage in stages %}
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#stage{{ stage.id }}">{{ stage.name }}</a>
-            </li>
-        {% endfor %}
-    </ul>
-    <div id="myTabContent" class="tab-content jumbotron ">
-        {% for stage in stages %}
-            <div class="tab-pane fade {{ loop.first  ? 'active show' }}" id="stage{{ stage.id }}">
-                <h4 class=" breadcrumb col-3 offset-5 row justify-content-center">Date de debut {{ stage.start_date }}</h4>
-                <h4 class=" breadcrumb col-3 offset-5 row justify-content-center">Date de fin {{ stage.end_date }}</h4>
-                    <p>{{ stage.description }}</p>
-            </div>
-        {% endfor %}
-    </div>
+            {% for stage in stages %}
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#stage{{ stage.id }}">{{ stage.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div id="myTabContent" class="tab-content jumbotron bg-success">
+            {% for stage in stages %}
+                <div class="tab-pane fade {{ loop.first  ? 'active show' }}" id="stage{{ stage.id }}">
+                    <div class="row">
+                        <div class="card">
+                            <div class="card-body ">
+                                <img src="/assets/images/stages/{{ stage.img_src }}" height="400px"
+                                     alt="{{ stage.alt_attribute }}">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                    <h4 class="breadcrumb col-7">Date de debut
+                        le {{ stage.start_date }} à {{ stage.start_time }}</h4>
+                    <h4 class="breadcrumb col-7">Date de fin
+                        le {{ stage.end_date }} à {{ stage.end_time }}</h4>
+                            <h4 class="breadcrumb">Activités proposées:</h4>
+                            <p class="breadcrumb">{{ stage.description }}</p>
+                            <div class="row justify-content-center mt-5">
+                            <button type="button" class="btn btn-warning btn-lg col-3">Tarifs</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </section>
 {% endblock %}
