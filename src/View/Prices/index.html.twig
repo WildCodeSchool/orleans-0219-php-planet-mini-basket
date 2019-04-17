@@ -17,10 +17,10 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td class="tableLight">Prix journée : {{ price.price }} &euro;</td>
+                            <td class="tableLight"><span class="underline">Prix journée :</span> {{ price.price }} &euro;</td>
                         </tr>
                         <tr>
-                            <td class="tableDark">Période : {{ price.period }}</td>
+                            <td class="tableDark"><span class="underline">Période :</span> {{ price.period }}</td>
                         </tr>
                         <tr>
                             <td class="tableLight">{% if price.included_meal == 1 %}
