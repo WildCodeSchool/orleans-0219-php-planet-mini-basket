@@ -15,10 +15,10 @@ class StageController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function index()
+    public function stage()
     {
         $stageCamp = new StageManager();
         $stages = $stageCamp->selectAll();
-        return $this->twig->render('Stage/index.html.twig', ['stages' => $stages]);
+        return $this->twig->render('Stage/stage.html.twig', ['stages' => $stages]);
     }
 }

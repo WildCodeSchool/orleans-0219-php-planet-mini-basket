@@ -1,7 +1,8 @@
 {% extends 'layout.html.twig' %}
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/stage.css">{% endblock %}
 {% block content %}
-    <section class="stage">
-        <h1 class="text-center">Nos Stages</h1>
+    <section class="stage container-fluid justify-content-center">
+        <h1 class="text-center display-2">Nos Stages</h1>
         <ul class="row justify-content-center nav nav-tabs">
             {% for stage in stages %}
                 <li class="nav-item">
@@ -9,10 +10,10 @@
                 </li>
             {% endfor %}
         </ul>
-        <div id="myTabContent" class="tab-content jumbotron bg-success">
+        <div id="myTabContent" class="tab-content jumbotron">
             {% for stage in stages %}
                 <div class="tab-pane fade {{ loop.first  ? 'active show' }}" id="stage{{ stage.id }}">
-                    <div class="row">
+                    <div class="row justify-content-center">
                         <div class="card">
                             <div class="card-body ">
                                 <img src="/assets/images/stages/{{ stage.img_src }}" height="400px"
@@ -20,14 +21,14 @@
                             </div>
                         </div>
                         <div class="col-6">
-                    <h4 class="breadcrumb col-7">Date de debut
-                        le {{ stage.start_date }} à {{ stage.start_time }}</h4>
-                    <h4 class="breadcrumb col-7">Date de fin
-                        le {{ stage.end_date }} à {{ stage.end_time }}</h4>
-                            <h4 class="breadcrumb">Activités proposées:</h4>
-                            <p class="breadcrumb">{{ stage.description }}</p>
+                             <h4 class=" col-8 "><i class="fas fa-calendar-alt"></i><span class="space">Date de debut
+                                     le {{ stage.start_date }} à {{ stage.start_time }}</span></h4>
+                    <h4 class=" col-8"><i class="fas fa-calendar-alt"></i><span class="space">Date de fin
+                            le {{ stage.end_date }} à {{ stage.end_time }}</span></h4>
+                            <h4><i class="fas fa-basketball-ball"></i><span class="space">Activités proposées:</span></h4>
+                            <p><span class="space">{{ stage.description }}</span></p>
                             <div class="row justify-content-center mt-5">
-                            <button type="button" class="btn btn-warning btn-lg col-3">Tarifs</button>
+                            <a href="/Prices/tarif"><button type="button" class="btn btn-lg">Tarifs</button></a>
                             </div>
                         </div>
 
