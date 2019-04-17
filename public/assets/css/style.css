@@ -52,6 +52,8 @@
 
 .trainer .desc {
     width: 70%;
+}
+
 .banner-title{
     top: 10vw;
     position: absolute;
@@ -71,7 +73,6 @@
     font-size: 16px;
 }
 
-.banner-text {
 .banner-text{
     top: 17vw;
     position: absolute;
@@ -109,4 +110,37 @@ section{
 
 .card-info{
     max-width: 20rem;
+}
+
+.tarifs{
+    color: #f0ad4e;
+    text-align: center;
+    font-size: 7em;
+}
+
+.tarifsTHead{
+    font-size: 1.5em;
+}
+
+.tableTitle{
+    background-color: #f0ad4e;
+}
+
+.tableDark{
+    background-color: #f3bd72;
+    font-size: 1.1em;
+}
+
+.tableLight{
+    background-color: #f7d3a1;
+    font-size: 1.1em;
+}
+
+.padding{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.underline{
+    text-decoration: underline;
 }
