@@ -22,3 +22,12 @@
     color: black;
     opacity: 0.8;
 }
+
+#accordion{
+    position: relative;
+    padding: 1vw;
+}
+
+.card-header{
+    background-color:  #f0ad4e;
+}
