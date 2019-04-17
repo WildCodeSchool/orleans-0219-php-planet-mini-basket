@@ -15,7 +15,7 @@ class FaqController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function faq()
+    public function index()
     {
         $faqManager = new FaqManager();
         $faqs = $faqManager->selectAll();
