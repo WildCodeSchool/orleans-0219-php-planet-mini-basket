@@ -1,9 +1,30 @@
 .tarifs{
     color: #f0ad4e;
     text-align: center;
-    font-size: 8em;
+    font-size: 7em;
 }
 
 .tarifsTHead{
     font-size: 1.5em;
+}
+
+td{
+    font-size: 1.1em;
+}
+
+.tableTitle{
+    background-color: #f0ad4e;
+}
+
+.tableDark{
+    background-color: #f3bd72;
+}
+
+.tableLight{
+    background-color: #f7d3a1;
+}
+
+.col-4{
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
