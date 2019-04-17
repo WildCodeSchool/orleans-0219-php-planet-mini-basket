@@ -15,7 +15,7 @@ class StageController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function stage()
+    public function index()
     {
         $stageCamp = new StageManager();
         $stages = $stageCamp->selectAll();
