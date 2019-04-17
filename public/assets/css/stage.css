@@ -1,0 +1,35 @@
+/* boutton*/
+.btn{
+    color: black;
+    background-color: #f0ad4e;
+    padding: 0.5rem 2rem;
+}
+.btn:hover{
+
+    background-color: #f09334;
+}
+/*navs*/
+.nav-tabs .nav-link.active{
+    background-color: #f0ad4e;
+}
+
+.nav-tabs .nav-link:hover{
+    background-color: #f0ad4e;
+}
+/*font awesome*/
+span.space {
+    margin-left: 0.5rem;
+}
+/* */
+.jumbotron{
+    margin-top: 0.5rem;
+    border: none;
+}
+/**/
+h1{
+    color: #f0ad4e;
+}
+
+h4{
+    padding: 0.75rem 1rem;
+}
