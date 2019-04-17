@@ -9,8 +9,6 @@
 
 namespace App\Controller;
 
-use App\Model\ItemManager;
-
 /**
  * Class ItemController
  *
@@ -27,7 +25,7 @@ class LegalMentionsController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function legal()
+    public function index()
     {
         return $this->twig->render('LegalMentions/legal.html.twig');
     }

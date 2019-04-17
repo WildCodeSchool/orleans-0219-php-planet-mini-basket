@@ -100,3 +100,10 @@ section{
 .card-info{
     max-width: 20rem;
 }
+
+.legal{
+    color: #f0ad4e;
+    text-align: center;
+    font-size: 7em;
+    padding-bottom: 3vw;
+}
