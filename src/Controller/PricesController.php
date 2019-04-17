@@ -27,12 +27,12 @@ class PricesController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function index()
+    public function prices()
     {
         $pricesManager = new PricesManager();
         $prices = $pricesManager->selectAll();
 
-        return $this->twig->render('Prices/index.html.twig', ['prices' => $prices]);
+        return $this->twig->render('Prices/prices.html.twig', ['prices' => $prices]);
     }
 
     /**
