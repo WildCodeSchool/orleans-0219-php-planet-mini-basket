@@ -93,8 +93,8 @@ section{
     margin-top: 1vw;
 }
 
-.border{
-    border: #60A9C3;
+.card-border{
+    border: solid 2px #f0ad4e;
 }
 
 .card-info{
