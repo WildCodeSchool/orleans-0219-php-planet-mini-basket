@@ -22,7 +22,7 @@
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
                                             data-target="#collapse{{ faq.id }}"
-                                            aria-expanded="true"
+                                            aria-expanded="false"
                                             aria-controls="collapse{{ faq.id }}">
                                         {{ faq.question_name }}
                                     </button>
@@ -48,7 +48,4 @@
 
 
 {% block javascript %}
-<script
-type = "text/javascript"
-src = "/assets/javascript/faq.js"
-crossorigin = "anonymous" > </script>{% endblock %}
+{% endblock %}
