@@ -30,6 +30,6 @@ class PriceController extends AbstractController
         $pricesManager = new PriceManager();
         $prices = $pricesManager->selectAll();
 
-        return $this->twig->render('Price/price.html.twig', ['prices' => $prices]);
+        return $this->twig->render('Price/index.html.twig', ['prices' => $prices]);
     }
 }
