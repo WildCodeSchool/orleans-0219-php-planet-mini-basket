@@ -17,8 +17,8 @@ class StageController extends AbstractController
      */
     public function index()
     {
-        $stageCamp = new StageManager();
-        $stages = $stageCamp->selectAll();
+        $stageManager = new StageManager();
+        $stages = $stageManager->selectAll();
         return $this->twig->render('Stage/stage.html.twig', ['stages' => $stages]);
     }
 }
