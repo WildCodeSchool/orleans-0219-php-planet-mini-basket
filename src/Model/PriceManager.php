@@ -12,7 +12,7 @@ namespace App\Model;
 /**
  *
  */
-class PricesManager extends AbstractManager
+class PriceManager extends AbstractManager
 {
     /**
      *

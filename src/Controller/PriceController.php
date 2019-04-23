@@ -9,13 +9,13 @@
 
 namespace App\Controller;
 
-use App\Model\PricesManager;
+use App\Model\PriceManager;
 
 /**
  * Class PricesController
  *
  */
-class PricesController extends AbstractController
+class PriceController extends AbstractController
 {
     /**
      * Display prices listing
@@ -27,9 +27,9 @@ class PricesController extends AbstractController
      */
     public function index()
     {
-        $pricesManager = new PricesManager();
+        $pricesManager = new PriceManager();
         $prices = $pricesManager->selectAll();
 
-        return $this->twig->render('Prices/prices.html.twig', ['prices' => $prices]);
+        return $this->twig->render('Price/price.html.twig', ['prices' => $prices]);
     }
 }
