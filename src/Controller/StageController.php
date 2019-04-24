@@ -19,6 +19,6 @@ class StageController extends AbstractController
     {
         $stageManager = new StageManager();
         $stages = $stageManager->selectAll();
-        return $this->twig->render('Stage/stage.html.twig', ['stages' => $stages]);
+        return $this->twig->render('Stage/index.html.twig', ['stages' => $stages]);
     }
 }
