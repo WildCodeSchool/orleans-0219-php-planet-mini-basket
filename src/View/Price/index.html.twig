@@ -1,0 +1,47 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Tarifs{% endblock %}
+
+{% block content %}
+        <h1 class="tarifs">Tarifs</h1>
+        <section>
+            <div class="row">
+                {% for price in prices %}
+                    <div class="col-md-6 col-lg-4 padding">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr  class="text-center tarifsTHead">
+                                    <th scope="col" class="tableTitle">{{ price.name | upper}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="tableLight"><span class="underline">Prix journée :</span> {{ price.price }} &euro;</td>
+                                </tr>
+                                <tr>
+                                    <td class="tableDark"><span class="underline">Période :</span> {{ price.period }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="tableLight">{% if price.included_meal == 1 %}
+                                            Goûter inclus
+                                        {% else %}
+                                            Goûter non inclus
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tableDark">
+                                        {% if price.start_date is not empty %}
+                                            Du {{ price.start_date }} au {{ price.end_date }}
+                                        {% else %}
+                                            Tous les {{ price.name | lower }}s
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+{% endblock %}
