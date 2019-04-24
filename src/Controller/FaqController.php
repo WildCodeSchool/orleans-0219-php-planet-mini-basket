@@ -19,7 +19,7 @@ class FaqController extends AbstractController
     {
         $faqManager = new FaqManager();
         $faqs = $faqManager->selectAll();
-        return $this->twig->render('Faq/faq.html.twig', [
+        return $this->twig->render('Faq/index.html.twig', [
             'faqs' => $faqs
         ]);
     }
