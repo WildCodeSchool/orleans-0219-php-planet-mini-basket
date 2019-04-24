@@ -24,3 +24,4 @@ class AdminController extends AbstractController
         return $this->twig->render('backOffice/index.html.twig');
     }
 }
+
