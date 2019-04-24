@@ -1,6 +1,7 @@
 /*target slide*/
-li.carousel-news{
+li.carousel-news {
     display: none;
+}
 
 .banner {
     background-image: url("/assets/images/bannerProjet4.jpg");
