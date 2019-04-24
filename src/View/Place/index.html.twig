@@ -40,11 +40,14 @@
                                             <p>{{ place.postalcode ~ " " ~ place.city }}</p>
                                         </div>
                                         <div class="col-6">
+                                            {% set adress = place.street|replace({' ': '+'}) %}
+                                            {% set link = "'" ~ "https://nominatim.openstreetmap.org/search.php?q=" ~ place.number ~ "+" ~
+                                                adress ~ "+" ~ place.city ~ "+france" ~ "'" %}
+                                            <a href={{ link|lower|convert_encoding('UTF-8', 'HTML-ENTITIES') }}>api</a>
                                             <p>API</p>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
