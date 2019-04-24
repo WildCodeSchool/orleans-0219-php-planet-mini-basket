@@ -13,7 +13,7 @@ class ActivitiesManager extends AbstractManager
     /**
      *
      */
-    const TABLE = 'news';
+    const TABLE = 'activities';
 
     /**
      *  Initializes this class.

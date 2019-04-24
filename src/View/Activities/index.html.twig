@@ -1,1 +1,12 @@
 {% extends '\layout.html.twig' %}
+{% block content %}
+    {% for activity in activities %}
+<div class="card border-primary mb-3">
+    <div class="card-body">
+        <img src="{{ activity.picture }}" alt="photo d'une enfant avec un ballon de basket dans les mains">
+        <h3>{{ activity.name }}</h3>
+        <p class="card-text">{{ activity.description }}</p>
+    </div>
+</div>
+    {% endfor %}
+{% endblock %}
