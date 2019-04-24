@@ -1,5 +1,21 @@
 {% extends 'layout.html.twig' %}
 
+
+{% block banner %}
+
+    {% include 'Home/_banner.html.twig' %}
+{% endblock %}
+
 {% block content %}
+
+    <section>
+        <h2 class="intro-title">Qui sommes-nous ?</h2>
+        <p class="intro-text"> Planète Mini Basket est un centre d'accueil pour jeunes de 4 à 14 ans.
+        Nous intervenons les mercredis et durant les vacances scolaires.</p>
+        <p class="intro-text"> Venez découvrir notre programme <a href="#">ici</a>.</p>
+    </section>
+    {% include 'Home/_info.html.twig' %}
+    {% include 'Home/_carousel.html.twig' %}
+    {% include '_bestActivities.html.twig' %}
 
 {% endblock %}
