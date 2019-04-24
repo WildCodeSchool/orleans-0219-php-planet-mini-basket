@@ -5,12 +5,10 @@
  * Date: 08/04/19
  * Time: 18:40
  */
-
 namespace App\Controller;
-
+use App\Model\NewsManager;
 class HomeController extends AbstractController
 {
-
     /**
      * Display home page
      *
@@ -21,6 +19,8 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $newsManager = new NewsManager();
+        $newsContent = $newsManager->selectAll();
+        return $this->twig->render('Home/index.html.twig', ['news' => $newsContent]);
     }
 }
