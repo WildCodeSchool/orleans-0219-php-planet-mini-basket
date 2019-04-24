@@ -1,3 +1,51 @@
+
+
+
+.logo{
+    color: black;
+    font-weight:700;
+    font-size:30px;
+}
+
+.address span , .menu span{
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    padding:10px 0px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+.address li a , .menu li a{
+    color: black;
+    letter-spacing: 3px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.address li, .menu li{
+    margin:20px 0px;
+    list-style: none;
+}
+
+.address li a:hover , .menu li a:hover{
+    color: #f0ad4e;
+
+}
+
+.address .fa{
+    color: #f0ad4e;
+    margin-right: 10px;
+    font-size:18px;
+}
+
+.footerDown {
+    background-color: #f0ad4e;
+    padding-top: 5px;
+    text-align: center;
+
 /*target slide*/
 li.carousel-news {
     display: none;
@@ -128,4 +176,45 @@ section{
 
 .card-info{
     max-width: 20rem;
+}
+
+.legal{
+    color: #f0ad4e;
+    text-align: center;
+    font-size: 7em;
+    padding-bottom: 3vw;
+
+.tarifs{
+    color: #f0ad4e;
+    text-align: center;
+    font-size: 7em;
+}
+
+.tarifsTHead{
+    font-size: 1.5em;
+}
+
+.tableTitle{
+    background-color: #f0ad4e;
+}
+
+.tableDark{
+    background-color: #f3bd72;
+    font-size: 1.1em;
+}
+
+.tableLight{
+    background-color: #f7d3a1;
+    font-size: 1.1em;
+}
+
+.padding{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.underline{
+    text-decoration: underline;
+
+
 }
