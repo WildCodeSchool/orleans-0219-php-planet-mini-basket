@@ -1,6 +1,7 @@
 /*target slide*/
-li.carousel-news{
+li.carousel-news {
     display: none;
+}
 
 .banner {
     background-image: url("/assets/images/bannerProjet4.jpg");
@@ -127,4 +128,37 @@ section{
 
 .card-info{
     max-width: 20rem;
+}
+
+.tarifs{
+    color: #f0ad4e;
+    text-align: center;
+    font-size: 7em;
+}
+
+.tarifsTHead{
+    font-size: 1.5em;
+}
+
+.tableTitle{
+    background-color: #f0ad4e;
+}
+
+.tableDark{
+    background-color: #f3bd72;
+    font-size: 1.1em;
+}
+
+.tableLight{
+    background-color: #f7d3a1;
+    font-size: 1.1em;
+}
+
+.padding{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.underline{
+    text-decoration: underline;
 }
