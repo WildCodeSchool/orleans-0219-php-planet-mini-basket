@@ -17,17 +17,12 @@
     {% block stylesheet %}{% endblock %}
 
 </head>
-<header>
-    {% block header %}{% endblock %}
-</header>
 
 <body>
 <header class="container-fluid">
     {% block banner %}{% endblock %}
 </header>
 <main class="container">
-    {% block content %}{% endblock %}
-</main>
 
 {% block content %}{% endblock %}
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

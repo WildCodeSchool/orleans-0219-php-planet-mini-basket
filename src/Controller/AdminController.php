@@ -5,7 +5,7 @@ namespace App\Controller;
 
 use App\Model\FaqManager;
 
-class FaqController extends AbstractController
+class AdminController extends AbstractController
 {
     /**
      * Display home page
@@ -19,7 +19,7 @@ class FaqController extends AbstractController
     {
         $faqManager = new FaqManager();
         $faqs = $faqManager->selectAll();
-        return $this->twig->render('Faq/adminFaq.html.twig', [
+        return $this->twig->render('Admin/adminFaq.html.twig', [
             'faqs' => $faqs
         ]);
     }
