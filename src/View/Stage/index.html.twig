@@ -1,8 +1,9 @@
 {% extends 'layout.html.twig' %}
 {% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/stage.css">{% endblock %}
+    <link rel="stylesheet" href="/assets/css/stage.css">
+{% endblock %}
 {% block content %}
-    <section class="stage container-fluid justify-content-center">
+    <section class="stage justify-content-center">
         <h1 class="text-center stage display-2">Nos Stages</h1>
         <ul class="row justify-content-center nav nav-tabs stage-nav-tabs">
             {% for stage in stages %}
@@ -16,18 +17,16 @@
             {% for stage in stages %}
                 <div class="tab-pane fade {{ loop.first  ? 'active show' }}" id="stage{{ stage.id }}">
                     <div class="row justify-content-center">
-                        <div class="card">
-                            <div class="card-body ">
-                                <img src="/assets/images/stages/{{ stage.img_src }}" height="400px"
+
+                                <img src="/assets/images/stages/{{ stage.img_src }}" height="300px"
                                      alt="{{ stage.alt_attribute }}">
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <h4 class="stage col-8 "><i class="fas fa-calendar-alt"></i><span class="space">Date de début
+
+                        <div class="col-12 col-lg-6">
+                            <h4 class="stage col-12 "><i class="fas fa-calendar-alt"></i><span class="space">Date de début
                                      le {{ stage.start_date }} à {{ stage.start_time }}</span></h4>
-                            <h4 class="stage col-8"><i class="fas fa-calendar-alt"></i><span class="space">Date de fin
+                            <h4 class="stage col-12"><i class="fas fa-calendar-alt"></i><span class="space">Date de fin
                             le {{ stage.end_date }} à {{ stage.end_time }}</span></h4>
-                            <h4 class="stage col-8"><i class="fas fa-basketball-ball "></i><span class="space">Activités proposées:</span>
+                            <h4 class="stage col-12"><i class="fas fa-basketball-ball "></i><span class="space">Activités proposées:</span>
                             </h4>
                             <p><span class="space">{{ stage.description }}</span></p>
                             <div class="row justify-content-center mt-5">
