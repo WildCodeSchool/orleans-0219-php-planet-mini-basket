@@ -41,10 +41,24 @@
                                         </div>
                                         <div class="col-6">
                                             {% set adress = place.street|replace({' ': '+'}) %}
-                                            {% set link = "'" ~ "https://nominatim.openstreetmap.org/search.php?q=" ~ place.number ~ "+" ~
-                                                adress ~ "+" ~ place.city ~ "+france" ~ "'" %}
+                                            {% set link = "https://www.openstreetmap.org/search?query=" ~ place.number ~ "+" ~
+                                                place.street ~ "+" ~ place.city ~ "+france"%}
+                                            <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                                                    src="{{ link }};layer=mapnik"
+                                                    style="border: 1px solid black">
+                                            </iframe>
+                                            <br/>
+                                            <small>
+                                                <a href="https://www.openstreetmap.org/#map=18/47.90332/1.92288">Afficher une carte plus grande</a>
+                                            </small>
+
+                                            <div id="link">
+                                            </div>
                                             <a href={{ link|lower|replace({'é':'e'}) }}>api</a>
                                             <p>API</p>
+                                        </div>
+                                        <div id="mapId" class="col-6">
+
                                         </div>
                                     </div>
                                 </div>
