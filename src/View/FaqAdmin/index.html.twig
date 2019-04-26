@@ -18,14 +18,8 @@
                 <input type="radio" id="hide" name="toggle" checked="checked">
                 <label for="hide">Fermer</label>
                 <input type="radio" id="show" name="toggle">
-                <label for="show">Ajouter une Question</label>
-                <form>
-                    <label>Votre Question :</label>
-                    <textarea></textarea>
-                    <label>Votre Réponse :</label>
-                    <textarea></textarea>
-                    <a href="#" type="button" id="submit">Submit</a>
-                </form>
+                <a href="add/"><label for="show">Ajouter une Question</label></a>
+                {% include 'Item/add.html.twig' %}
             </div>
         </div>
         <div class="row justify-content-center">
