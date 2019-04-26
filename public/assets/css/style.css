@@ -109,6 +109,15 @@ h2 {
     opacity: 0.8;
 }
 
+#accordion{
+    position: relative;
+    padding: 1vw;
+}
+
+.card-header{
+    background-color:  #f0ad4e;
+}
+
 section{
     padding-top: 5vw;
     padding-bottom: 5vw;
