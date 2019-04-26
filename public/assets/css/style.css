@@ -1,3 +1,159 @@
+h2 {
+    font-size: 3.5em;
+}
+
+p{
+    font-size: 1.4em;
+    font-family: ABeeZee;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    background-image: url("/assets/images/bannerProjet4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30vw;
+    filter: brightness(0.95);
+    margin-top: 7vw;
+}
+
+.banner-title{
+    top: 10vw;
+    position: absolute;
+    font-size: 5vw;
+}
+
+.banner-text{
+    top: 17vw;
+    position: absolute;
+    font-size: 2.5vw;
+    color: black;
+    opacity: 0.8;
+}
+
+
+
+.trainer {
+    position: relative;
+    background: rgba(240, 173, 78, 0.9);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .trainer {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+.trainer img {
+    width: 84%;
+}
+
+
+.trainer .title {
+    width: 100%;
+    position: absolute;
+    bottom: 60%;
+    left: 42%;
+    transform: rotate(270deg);
+}
+
+.trainer .title h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 0;
+}
+
+.trainer .title h3 a {
+    color: #000;
+}
+
+.trainer .title h3 a:hover, .trainer .title h3 a:focus {
+    color: white;
+}
+
+.trainer .title span {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.trainer .desc {
+    width: 70%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 7px;
+}
+
+.trainer .desc  li a {
+    color: #000;
+}
+
+.trainer .desc  li a i {
+    font-size: 16px;
+}
+
+.banner-text {
+    top: 17vw;
+    position: absolute;
+    font-size: 2.5vw;
+    color: black;
+    opacity: 0.8;
+}
+
+#accordion{
+    position: relative;
+    padding: 1vw;
+}
+
+.card-header{
+    background-color:  #f0ad4e;
+}
+
+section{
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
+.info-header{
+    text-align: center;
+    font-size: 2em;
+}
+
+.icon-info{
+    color: black;
+    font-size: 3em;
+    padding-bottom: 15px;
+}
+
+.info-text{
+    text-align: center;
+    color: white;
+}
+
+.info-text-children{
+    margin-top: 1vw;
+}
+
+
+.card-info{
+    max-width: 20rem;
+}
+
+.card {
+    background-color: rgba(240, 173, 78, 0.9);
+}
+
+
 .logo{
     color: black;
     font-weight:700;
@@ -44,149 +200,19 @@
     text-align: center;
 }
 
-/*target slide*/
-li.carousel-news {
-    display: none;
-}
-
-.banner {
-    background-image: url("/assets/images/bannerProjet4.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 25vw;
-    filter: brightness(0.95);
-    margin-top: 7vw;
-    background-position-y: -4.5vw;
-}
-
-.banner-title {
-    top: 8vw;
-    position: absolute;
-    bottom: 60%;
-    left: 42%;
-    transform: rotate(270deg);
+.footer {
+    font-size: 0.8em;
 }
 
 
-.banner-text {
-    top: 15vw;
-    position: absolute;
-    font-size: 2.5vw;
+.tarifs {
+    margin-top: 2rem;
+    font-size: 5.5em;
     color: black;
-    opacity: 0.8;
 }
 
-.trainer {
-    position: relative;
-    background: rgba(0, 0, 0, 0.05);
-}
-
-@media screen and (max-width: 768px) {
-    .trainer {
-        margin-bottom: 30px;
-    }
-}
-
-.trainer img {
-    width: 84%;
-}
-
-.trainer .title {
-    width: 100%;
-}
-
-.trainer .title h3 {
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin: 0;
-    padding: 0;
-}
-
-.trainer .title h3 a {
-    color: #000;
-}
-
-.trainer .title h3 a:hover, .trainer .title h3 a:focus {
-    color: #f0ad4e;
-}
-
-.trainer .title span {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.4);
-}
-
-.trainer .desc {
-    width: 70%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 7px;
-}
-
-.trainer .desc  li a {
-    color: #000;
-}
-
-.trainer .desc  li a i {
-    font-size: 16px;
-}
-
-.intro-title{
-    font-size: 3em;
-}
-
-.intro-text{
-    font-size: 1.2em;
-    font-family: 'ABeeZee', sans-serif;
-}
-
-section{
-    padding-top: 3vw;
-    padding-bottom: 3vw;
-}
-
-.info-header{
-    text-align: center;
-    font-size: 2em;
-}
-
-.icon-info{
-    font-size: 3em;
-    padding-bottom: 15px;
-}
-
-.info-text{
-    text-align: center;
-}
-
-.info-text-children{
-    margin-top: 1vw;
-}
-
-.card-border{
-    border: solid 2px #f0ad4e;
-}
-
-.card-info{
-    max-width: 20rem;
-}
-
-.legal {
-    color: #f0ad4e;
-    text-align: center;
-    font-size: 7em;
-    padding-bottom: 3vw;
-}
-
-.tarifs{
-    color: #f0ad4e;
-    text-align: center;
-    font-size: 7em;
+.price {
+    margin-top: 0;
 }
 
 .tarifsTHead{
@@ -194,7 +220,7 @@ section{
 }
 
 .tableTitle{
-    background-color: #f0ad4e;
+    background-color: rgba(240, 173, 78, 0.9);
 }
 
 .tableDark{
@@ -214,6 +240,15 @@ section{
 
 .underline{
     text-decoration: underline;
+    color: black;
+}
+
+.intro-text {
+    padding: 0.4em;
+}
+
+.ici {
+    color: #f0ad4e;
 }
 
 .mapIframe{
@@ -223,4 +258,17 @@ section{
 
 .presentationModal .row{
     text-align: center;
+    color: black;
+}
+
+.presentationCard{
+    background-color: white;
+}
+
+.presentationH1{
+    margin-top: 5vw;
+}
+
+;presentation{
+    size: 0.5em;
 }
