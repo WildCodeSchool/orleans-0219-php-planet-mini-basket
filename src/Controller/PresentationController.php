@@ -10,12 +10,13 @@
 namespace App\Controller;
 
 use App\Model\PlaceManager;
+use App\Model\PresentationManager;
 
 /**
  * Class PlaceController
  *
  */
-class PlaceController extends AbstractController
+class PresentationController extends AbstractController
 {
 
 
@@ -32,6 +33,13 @@ class PlaceController extends AbstractController
         $placeManager = new PlaceManager();
         $places = $placeManager->selectAll();
 
-        return $this->twig->render('Place/index.html.twig', ['places' => $places]);
+        $presentationManager = new PresentationManager();
+        $presentation = $presentationManager->selectAll();
+
+        return $this->twig->render(
+            'Presentation/index.html.twig',
+            ['places' => $places,
+            'presentation' => $presentation]
+        );
     }
 }

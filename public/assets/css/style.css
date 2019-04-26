@@ -42,6 +42,7 @@
     background-color: #f0ad4e;
     padding-top: 5px;
     text-align: center;
+}
 
 /*target slide*/
 li.carousel-news {
@@ -175,11 +176,12 @@ section{
     max-width: 20rem;
 }
 
-.legal{
+.legal {
     color: #f0ad4e;
     text-align: center;
     font-size: 7em;
     padding-bottom: 3vw;
+}
 
 .tarifs{
     color: #f0ad4e;
