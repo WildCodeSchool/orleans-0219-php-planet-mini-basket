@@ -19,7 +19,7 @@ class AdminController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function indexAdmin()
+    public function index()
     {
         return $this->twig->render('backOffice/index.html.twig');
     }
