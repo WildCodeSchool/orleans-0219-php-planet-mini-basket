@@ -11,7 +11,6 @@ class NewsAdminController extends AbstractController
     {
         $newsManager = new NewsManager();
         $news = $newsManager->selectAll();
-        var_dump($news);
         return $this->twig->render('NewsAdmin/index.html.twig', ['news' => $news]);
     }
 }
