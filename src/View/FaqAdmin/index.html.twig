@@ -1,6 +1,8 @@
 {% extends 'layout.html.twig' %}
 
-{% block stylesheet %}{% endblock %}
+{% block stylesheet %}
+<link href="/assets/css/admin.css" rel="stylesheet">
+{% endblock %}
 
 {% block title %}
     Admin FAQ
@@ -10,6 +12,9 @@
     <div class="container  question">
         <div class="row justify-content-center">
             <h1>Administration des FAQs</h1>
+        </div>
+        <div class="row justify-content-center">
+            <button>Ajouter</button>
         </div>
         <div class="row justify-content-center">
             <div class="col-10">
@@ -32,7 +37,21 @@
                             <td>{{ faq.question_name }}</td>
                             <td>{{ faq.answer_name }}</td>
                             <td>Editer</td>
-                            <td>Supprimer</td>
+                            <td><a class="btn trigger" href="javascript:;">Supprimer</a>
+                                <div class="modal-wrapper">
+                                    <div class="modal">
+                                        <div class="head">
+                                            <a class="btn-close trigger" href="javascript:;"></a>
+                                            <p class="text-center title">Suppression</p>
+                                        </div>
+                                        <div class="content text-center">
+                                            <p class="confirmation">Confirmer vous la suppresion de cet élèment ?</p>
+                                            <a class="yes"><i class="fas fa-check"> OUI</i></a>
+                                            <a class="no"><i class="fas fa-times"> NON</i></a>
+                                        </div>
+                                    </div>
+                            </td>
+
                         </tr>
 
                     {% endfor %}
@@ -47,4 +66,5 @@
 
 
 {% block javascript %}
+<script src="/assets/js/indexAdmin.js" crossorigin="anonymous"></script>
 {% endblock %}

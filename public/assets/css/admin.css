@@ -1,0 +1,95 @@
+.title {
+    font-size: 2em;
+}
+
+.confirmation {
+    font-size: 1.5em;
+}
+
+.yes, .no {
+    font-size: 2em;
+    padding: 1em;
+}
+
+
+
+.modal-wrapper{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0; left:0;
+    visibility:hidden;
+    opacity:0;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.modal-wrapper.open{
+    opacity:1;
+    visibility:visible;
+}
+
+.modal{
+    width:600px;
+    height:400px;
+    display:block;
+    margin:50% 0 0 -300px;
+    position:relative;
+    top:50%; left:50%;
+    background:#fff;
+    opacity:0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.modal-wrapper.open .modal{
+    margin-top:-200px;
+    opacity:1;
+}
+
+.head{
+    width:100%;
+    height:70px;
+    padding:1em;
+    overflow:hidden;
+    background: #f0ad4e;
+}
+
+.btn-close{
+    width:22px;
+    height:22px;
+    display:block;
+    float:right;
+}
+
+.btn-close::before, .btn-close::after{
+    content:'';
+    width:32px;
+    height:6px;
+    display:block;
+    background: black;
+}
+
+.btn-close::before{
+    margin-top:12px;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+.btn-close::after{
+    margin-top:-6px;
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+}
+
+.content{
+    padding:5%;
+}
