@@ -9,8 +9,10 @@
 
 namespace App\Controller;
 
+use App\Model\HistoryManager;
 use App\Model\PlaceManager;
 use App\Model\PresentationManager;
+use App\Model\WhatIsItManager;
 
 /**
  * Class PlaceController
@@ -36,10 +38,18 @@ class PresentationController extends AbstractController
         $presentationManager = new PresentationManager();
         $presentation = $presentationManager->selectAll();
 
+        $historyManager = new HistoryManager();
+        $history = $historyManager->selectAll();
+
+        $whatIsItManager = new WhatIsItManager();
+        $whatIsIt = $whatIsItManager->selectAll();
+
         return $this->twig->render(
             'Presentation/index.html.twig',
             ['places' => $places,
-            'presentation' => $presentation]
+            'presentation' => $presentation,
+            'history' => $history,
+            'whatIsIt' => $whatIsIt]
         );
     }
 }
