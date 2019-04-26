@@ -217,7 +217,8 @@ section{
 }
 
 .presentationModal{
-    width: 100vw;
+    width: 10000px!important;
+    height: 40vw;
 }
 
 .mapIframe{
