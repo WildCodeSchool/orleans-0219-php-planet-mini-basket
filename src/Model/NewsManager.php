@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Model;
 
+namespace App\Model;
 
 class NewsManager extends AbstractManager
 {
@@ -9,6 +9,7 @@ class NewsManager extends AbstractManager
      *
      */
     const TABLE = 'news';
+
     /**
      *  Initializes this class.
      */
@@ -17,4 +18,3 @@ class NewsManager extends AbstractManager
         parent::__construct(self::TABLE);
     }
 }
-

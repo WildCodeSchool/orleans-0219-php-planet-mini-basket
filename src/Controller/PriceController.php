@@ -6,8 +6,11 @@
  * Time: 16:07
  * PHP version 7
  */
+
 namespace App\Controller;
+
 use App\Model\PriceManager;
+
 /**
  * Class PricesController
  *
@@ -26,6 +29,7 @@ class PriceController extends AbstractController
     {
         $pricesManager = new PriceManager();
         $prices = $pricesManager->selectAll();
+
         return $this->twig->render('Price/index.html.twig', ['prices' => $prices]);
     }
 }

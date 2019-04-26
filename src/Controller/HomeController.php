@@ -5,10 +5,14 @@
  * Date: 08/04/19
  * Time: 18:40
  */
+
 namespace App\Controller;
+
 use App\Model\NewsManager;
+
 class HomeController extends AbstractController
 {
+
     /**
      * Display home page
      *

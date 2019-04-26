@@ -6,13 +6,17 @@
  * Time: 16:07
  * PHP version 7
  */
+
 namespace App\Controller;
+
 /**
  * Class ItemController
  *
  */
 class LegalMentionsController extends AbstractController
 {
+
+
     /**
      * Display legal listing
      *
