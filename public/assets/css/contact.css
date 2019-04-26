@@ -122,3 +122,7 @@ ul {
         text-align: left;
     }
 }
+
+.formErrors {
+    color: red;
+}
