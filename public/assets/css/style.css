@@ -35,7 +35,7 @@ h2 {
 
 .trainer {
     position: relative;
-    background: rgb(240, 173, 78, 0.9);
+    background: rgba(240, 173, 78, 0.9);
     border-radius: 5px;
 }
 
@@ -140,7 +140,7 @@ section{
 }
 
 .card {
-    background-color: rgb(240, 173, 78, 0.9);
+    background-color: rgba(240, 173, 78, 0.9);
 }
 
 
@@ -206,7 +206,7 @@ section{
 }
 
 .tableTitle{
-    background-color: rgb(240, 173, 78, 0.9);
+    background-color: rgba(240, 173, 78, 0.9);
 }
 
 .tableDark{
