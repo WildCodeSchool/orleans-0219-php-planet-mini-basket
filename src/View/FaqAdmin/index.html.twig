@@ -1,4 +1,4 @@
-{% extends 'layout.html.twig' %}
+{% extends 'layoutAdmin.html.twig' %}
 
 {% block stylesheet %}
 <link href="/assets/css/admin.css" rel="stylesheet">
@@ -11,10 +11,25 @@
 {% block content %}
     <div class="container  question">
         <div class="row justify-content-center">
-            <h1>Administration des FAQs</h1>
+            <h1 class="titre">Administration des FAQs</h1>
+        </div>
+        <div>
+            <div class="form-collapse">
+                <input type="radio" id="hide" name="toggle" checked="checked">
+                <label for="hide">Fermer</label>
+                <input type="radio" id="show" name="toggle">
+                <label for="show">Ajouter une Question</label>
+                <form>
+                    <label>Votre Question :</label>
+                    <textarea></textarea>
+                    <label>Votre Réponse :</label>
+                    <textarea></textarea>
+                    <a href="#" type="button" id="submit">Submit</a>
+                </form>
+            </div>
         </div>
         <div class="row justify-content-center">
-            <button>Ajouter</button>
+            <h2 class="titre2">Questions présentes sur le site :</h2>
         </div>
         <div class="row justify-content-center">
             <div class="col-10">
@@ -37,19 +52,21 @@
                             <td>{{ faq.question_name }}</td>
                             <td>{{ faq.answer_name }}</td>
                             <td><a class="btn trigger"><i class="fas fa-pencil-ruler text-center"></i> Editer</a></td>
-                            <td><a class="btn trigger" href="javascript:;"><i class="fas fa-trash-alt text-center"></i> Supprimer</a>
-                                <div class="modal-wrapper">
-                                    <div class="modal">
-                                        <div class="head">
-                                            <a class="btn-close trigger" href="javascript:;"></a>
-                                            <p class="text-center title">Suppression</p>
-                                        </div>
-                                        <div class="content text-center">
-                                            <p class="confirmation">Confirmer vous la suppresion de cet élèment ?</p>
-                                            <a class="yes"><i class="fas fa-check"> OUI</i></a>
-                                            <a class="no"><i class="fas fa-times"> NON</i></a>
+                            <td>  <a class="btn trigger" id="modBtn"><i class="fas fa-trash-alt"></i>Supprimer</a>
+                                    <div id="modal" class="modal">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="header-title">Supprimer</h3>
+                                                <div class="close fas fa-times"></div>
+                                            </div>
+                                            <div class="modal-body text-center">
+                                                <h3>Confirmer vous la suppresion de cet élèment ?</h3>
+                                                <a class="yes "><i class="fas fa-check"></i> Oui</a>
+                                                <a class="no "><i class="fas fa-times"></i> Non</a>
+                                            </div>
                                         </div>
                                     </div>
+
                             </td>
 
                         </tr>
