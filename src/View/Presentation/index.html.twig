@@ -3,7 +3,11 @@
 {% block title %} Présentation {% endblock %}
 
 {% block content %}
+    <h1>Présentation</h1>
+
+
     <section>
+        <h2>Locaux</h2>
         <div class="row">
             {% for place in places %}
             <div class="col-4">
@@ -57,6 +61,11 @@
             </div>
             {% endfor %}
         </div>
+    </section>
+
+    <section>
+        <h2>Qui-sommes-nous ?</h2>
+        <p>{{ presentation[0]['who_are_we'] }}</p>
     </section>
 
 {% endblock %}
