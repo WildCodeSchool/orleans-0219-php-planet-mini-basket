@@ -215,3 +215,12 @@ section{
 .underline{
     text-decoration: underline;
 }
+
+.presentationModal{
+    width: 100vw;
+}
+
+.mapIframe{
+    width: 100%;
+    height: 75%;
+}
