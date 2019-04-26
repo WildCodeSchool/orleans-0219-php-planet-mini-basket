@@ -31,8 +31,8 @@
                             <th scope="row">{{ faq.id }}</th>
                             <td>{{ faq.question_name }}</td>
                             <td>{{ faq.answer_name }}</td>
-                            <td>Editer</td>
-                            <td>Supprimer</td>
+                            <td><a href="/faq/edit/{{ faq.id }}">Editer</a></td>
+                            <td><a href="/faq/delete/{{faq.id}}">Supprimer</a></td>
                         </tr>
 
                     {% endfor %}
