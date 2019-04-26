@@ -5,7 +5,7 @@ namespace App\Controller;
 
 use App\Model\NewsManager;
 
-class AdminController extends AbstractController
+class NewsAdminController extends AbstractController
 {
     public function news()
     {
