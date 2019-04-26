@@ -129,3 +129,44 @@ section{
 .card-info{
     max-width: 20rem;
 }
+
+/* ACTIVITIES */
+
+.activities-pictures{
+    height: 20vw;
+    max-width: 28vw;
+    object-fit: cover;
+}
+
+.activities-card{
+    max-width: 20vw;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.activities-title{
+    position: absolute;
+    font-size: 3vw;
+    color: #f0ad4e;
+    font-weight: bold;
+    margin-top: 15vw;
+    left: 2vw;
+}
+
+.activities-description{
+    visibility : hidden;
+    position: absolute;
+    max-width: 45%;
+    font-family: 'ABeeZee', sans-serif;
+    left: 12vw;
+    font-size: 0.8vw;
+}
+
+.activities-card:hover .activities-description{
+    visibility: visible;
+}
+
+.activities-card:hover .activities-title{
+    display: none;
+}

@@ -1,12 +1,14 @@
 {% extends '\layout.html.twig' %}
 {% block content %}
+    <div class="row justify-content-around">
     {% for activities in activity %}
-        <div class="card border-primary mb-3">
-            <div class="card-body">
-                <img src="{{ activities.picture }}" alt="{{ activities.alt }}">
-                <h3>{{ activities.name }}</h3>
-                <p class="card-text">{{ activities.description }}</p>
+        <div class="card activities-card border-primary mb-3 col-6">
+            <div class="card-body activities-card">
+                <h3 class="activities-title">{{ activities.name }}</h3>
+                <p class="card-text activities-description">{{ activities.description }}</p>
+                <img src="{{ activities.picture }}" alt="{{ activities.alt }}" class="activities-pictures">
             </div>
         </div>
     {% endfor %}
+    </div>
 {% endblock %}
