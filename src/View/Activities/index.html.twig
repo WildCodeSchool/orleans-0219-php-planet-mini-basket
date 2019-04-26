@@ -2,11 +2,15 @@
 {% block content %}
     <div class="row justify-content-around">
     {% for activities in activity %}
-        <div class="card activities-card border-primary mb-3 col-6">
-            <div class="card-body activities-card">
-                <h3 class="activities-title">{{ activities.name }}</h3>
-                <p class="card-text activities-description">{{ activities.description }}</p>
-                <img src="{{ activities.picture }}" alt="{{ activities.alt }}" class="activities-pictures">
+        <div class="card activities-card mb-3 col-6">
+            <div class="flip-card-inner">
+                <div class="card-body flip-card-front activities-card">
+                    <h3 class="activities-title">{{ activities.name }}</h3>
+                    <img src="{{ activities.picture }}" alt="{{ activities.alt }}" class="activities-pictures">
+                </div>
+                <div class="flip-card-back">
+                    <p class="card-text activities-description">{{ activities.description }}</p>
+                </div>
             </div>
         </div>
     {% endfor %}

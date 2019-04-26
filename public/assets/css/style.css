@@ -140,9 +140,11 @@ section{
 
 .activities-card{
     max-width: 20vw;
-    position: relative;
     overflow: hidden;
     padding: 0;
+    perspective: 1000px;
+    border: #f0ad4e solid 2px;
+    background-color: transparent;
 }
 
 .activities-title{
@@ -154,19 +156,36 @@ section{
     left: 2vw;
 }
 
-.activities-description{
-    visibility : hidden;
+.flip-card-inner{
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.activities-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
     position: absolute;
-    max-width: 45%;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front, .flip-card-back{
+    backface-visibility: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-back{
+    position: absolute;
     font-family: 'ABeeZee', sans-serif;
-    left: 12vw;
-    font-size: 0.8vw;
+    text-align: center;
+    font-size: 1vw;
+    transform: rotateY(180deg);
+    background-color: #f0ad4e;
 }
 
-.activities-card:hover .activities-description{
-    visibility: visible;
-}
-
-.activities-card:hover .activities-title{
-    display: none;
+.activities-description{
+    ;
 }
