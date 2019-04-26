@@ -205,9 +205,13 @@ section{
 
 
 .tarifs {
-    margin: 0.4em;
+    margin-top: 2rem;
     font-size: 5.5em;
     color: black;
+}
+
+.price {
+    margin-top: 0;
 }
 
 .tarifsTHead{
