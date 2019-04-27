@@ -33,4 +33,11 @@ class NewsAdminController extends AbstractController
         }
         return $this->twig->render('NewsAdmin/add.html.twig', ['error'=>$error]);
     }
+
+    public function show(int $id)
+    {
+        $newsManager = new NewsManager();
+        $news = $newsManager->selectOneById($id);
+        return $this->twig->render('NewsAdmin/show.html.twig', ['news' => $news]);
+    }
 }
