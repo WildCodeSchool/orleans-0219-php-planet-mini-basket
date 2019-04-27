@@ -12,10 +12,10 @@
             {% for place in places %}
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card presentationCard">
-                    <img class="card-img-top" src="{{ place.place_image1 }}" alt="Card image cap">
-                    <div class="card-body">
+                    <img class="card-img-top presentationCardImg" src="/assets/images/{{ place.place_image1 }}" alt="Card image cap">
+                    <div class="card-body presentationCardBody">
                         <h5 class="card-title">{{ place.place_name }}</h5>
-                        <p class="card-text">{{ place.description }}</p>
+                        <p class="card-text presentationCardTxt">{{ place.description }}</p>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#id{{ place.id }}">
                             Plus d'informations
                         </button>

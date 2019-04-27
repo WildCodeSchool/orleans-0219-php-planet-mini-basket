@@ -265,10 +265,23 @@ section{
     background-color: white;
 }
 
+.presentationCardBody{
+    min-height: 11vw;
+}
+
+.presentationCardImg{
+    min-height: 15vw;
+    object-fit: cover;
+}
+
+.presentationCardTxt{
+    min-height: 5vw;
+}
+
 .presentationH1{
     margin-top: 5vw;
 }
 
-;presentation{
+.presentation{
     size: 0.5em;
 }
