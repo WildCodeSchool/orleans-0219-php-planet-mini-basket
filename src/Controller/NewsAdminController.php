@@ -28,7 +28,7 @@ class NewsAdminController extends AbstractController
                     'news_content' => $data['content']
                 ];
                 $id = $newsManager->insert($news);
-                header('Location:/Admin/show/' . $id);
+                header('Location:/NewsAdmin/show/' . $id);
             }
         }
         return $this->twig->render('NewsAdmin/add.html.twig', ['error'=>$error]);
