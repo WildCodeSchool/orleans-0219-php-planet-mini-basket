@@ -5,20 +5,32 @@ namespace App\Controller;
 
 use App\Model\NewsManager;
 
+use App\tools\CleanData;
+
 class NewsAdminController extends AbstractController
 {
     public function add()
     {
+        $error = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $cleanData = new CleanData($_POST);
+            $data = $cleanData->trimData();
             $newsManager = new NewsManager();
-            $news = [
-                'news_title' => $_POST['title'],
-                'news_content' => $_POST['content']
-            ];
-            $id = $newsManager->insert($news);
-            header('Location:/Admin/show/' . $id);
-        }
+            if (empty($data['title'])) {
+                $error['title'] = 'Veuillez compléter le champ tite';
+            }
 
-        return $this->twig->render('Admin/add.html.twig');
+            if (empty($data['content'])) {
+                $error['content'] = 'Veuillez inséré un contenue';
+            } else {
+                $news = [
+                    'news_title' => $data['title'],
+                    'news_content' => $data['content']
+                ];
+                $id = $newsManager->insert($news);
+                header('Location:/Admin/show/' . $id);
+            }
+        }
+        return $this->twig->render('NewsAdmin/add.html.twig', ['error'=>$error]);
     }
 }
