@@ -6,7 +6,7 @@
     <h1 class="presentationH1">Présentation</h1>
 
 
-    <section>
+    <section id="presentation">
         <h2>Locaux</h2>
         <div class="row">
             {% for place in places %}
@@ -62,11 +62,8 @@
             </div>
             {% endfor %}
         </div>
-    </section>
 
-    <section>
-
-        <h2>Qui-sommes-nous ?</h2>
+        <h2 class="presentationH2">Qui-sommes-nous ?</h2>
         <div class="row">
             <div class="col-10">
                 <p class="presentation">{{ presentation[0]['who_are_we'] }}</p>
@@ -76,7 +73,7 @@
             </div>
         </div>
 
-        <h2>Un peu d'histoire</h2>
+        <h2 class="presentationH2">Un peu d'histoire</h2>
         <div class="row">
             <div class="col-2">
                 <img src="{{ history[0]['img_history'] }}">
@@ -86,7 +83,7 @@
             </div>
         </div>
 
-        <h2>Planète mini-basket, qu'est-ce que c'est ?</h2>
+        <h2 class="presentationH2">Planète mini-basket, qu'est-ce que c'est ?</h2>
         <div class="row">
             <div class="col-10">
                 <p class="presentation">{{ whatIsIt[0]['what_is_it'] }}</p>

@@ -279,9 +279,16 @@ section{
 }
 
 .presentationH1{
-    margin-top: 5vw;
+    margin-top: 7vw;
+    font-size: 5em;
+    text-align: center;
 }
 
-.presentation{
-    size: 0.5em;
+.presentationH2{
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+}
+
+#presentation .presentation{
+    font-size: 1em;
 }
