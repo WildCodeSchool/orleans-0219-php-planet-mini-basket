@@ -1,0 +1,37 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block content %}
+    <section class="stage justify-content-center">
+        <h1 class="text-center stage display-2">Vos Stages</h1>
+        <ul class="row justify-content-center nav nav-tabs stage-nav-tabs">
+            {% for stage in stages %}
+                <li class="nav-item">
+                    <a class="nav-link {{ loop.first ? 'active' }}" data-toggle="tab"
+                       href="#stage{{ stage.id }}">{{ stage.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div id="myTabContent" class="tab-content stage-margin">
+            {% for stage in stages %}
+                <div class="tab-pane fade {{ loop.first  ? 'active show' }}" id="stage{{ stage.id }}">
+                    <div class="row justify-content-center">
+
+                        <img src="/assets/images/stages/{{ stage.img_src }}" height="300px"
+                             alt="{{ stage.alt_attribute }}">
+
+                        <div class="col-12 col-lg-6">
+                            <h4 class="stage col-12 "><i class="fas fa-calendar-alt"></i><span class="space">{{ stage.Debut }}</span></h4>
+                            <h4 class="stage col-12"><i class="fas fa-calendar-alt"></i><span class="space">{{ stage.Fin }}</span></h4>
+                            <h4 class="stage col-12"><i class="fas fa-basketball-ball "></i><span class="space">Activités proposées:</span>
+                            </h4>
+                            <p><span class="space">{{ stage.description }}</span></p>
+                            <div class="row justify-content-center mt-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+
