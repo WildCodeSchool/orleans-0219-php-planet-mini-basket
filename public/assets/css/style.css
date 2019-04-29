@@ -151,6 +151,16 @@ section{
 
 /* ACTIVITIES */
 
+.activities{
+    font-size: 5.5em;
+    text-align: center;
+}
+
+.activities-text{
+    padding-bottom: 5vw;
+    text-align: center;
+}
+
 .activities-pictures{
     height: 20vw;
     object-fit: cover;
@@ -205,11 +215,11 @@ section{
 .activities-description {
     text-align: center;
     padding: 0.5vw;
-    font-size: 1vw;
+    font-size: 1rem;
 }
 
 .activities-section{
-    padding-top: 10vw;
+    padding-top: 9vw;
 }
 
 @media screen and (max-width: 1590px) {
@@ -221,6 +231,12 @@ section{
 @media screen and (min-width: 320px) and (max-width: 770px) {
     .activities-section{
         padding-top: 25vw;
+    }
+}
+
+@media screen and (max-width: 924px) {
+    .activities-description{
+        font-size: 1.5vw;
     }
 }
 
