@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Controller;
 
 use App\Model\NewsManager;
@@ -9,6 +8,13 @@ use App\tools\CleanData;
 
 class NewsAdminController extends AbstractController
 {
+    public function index()
+    {
+        $newsManager = new NewsManager();
+        $news = $newsManager->selectAll();
+        return $this->twig->render('NewsAdmin/index.html.twig', ['news' => $news]);
+    }
+
     public function add()
     {
         $error = [];
@@ -31,7 +37,7 @@ class NewsAdminController extends AbstractController
                 header('Location:/NewsAdmin/show/' . $id);
             }
         }
-        return $this->twig->render('NewsAdmin/add.html.twig', ['error'=>$error]);
+        return $this->twig->render('NewsAdmin/add.html.twig', ['error' => $error]);
     }
 
     public function show(int $id)
