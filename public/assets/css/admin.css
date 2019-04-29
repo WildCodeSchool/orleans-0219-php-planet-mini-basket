@@ -127,3 +127,20 @@ a.article:hover {
         display: none;
     }
 }
+
+.placeTitle{
+    font-size: 1.5em;
+    color: black;
+    font-weight: bold;
+    border-bottom: solid 1px black;
+}
+
+.placeText{
+    font-size: 1.3em;
+    color: grey;
+}
+
+.placeText a{
+    font-size: 0.8em;
+    color: grey;
+}
