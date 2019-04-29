@@ -35,12 +35,20 @@ class PresentationController extends AbstractController
         $placeManager = new PlaceManager();
         $places = $placeManager->selectAll();
 
+        $presentationManager = new PresentationManager();
+        $presentation = $presentationManager->selectAll();
+
+        $historyManager = new HistoryManager();
+        $history = $historyManager->selectAll();
+
         $whatIsItManager = new WhatIsItManager();
         $whatIsIt = $whatIsItManager->selectAll();
 
         return $this->twig->render(
             'Presentation/index.html.twig',
             ['places' => $places,
+            'presentation' => $presentation,
+            'history' => $history,
             'whatIsIt' => $whatIsIt]
         );
     }
