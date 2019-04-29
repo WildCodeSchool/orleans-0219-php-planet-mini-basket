@@ -1,6 +1,6 @@
-{% extends 'layoutAdmin.html.twig' %}
+{#{% extends 'layoutAdmin.html.twig' %}#}
 
-{% block content %}
+{#{% block content %}#}
     <section class="stage justify-content-center">
         <h1 class="text-center stage display-2">Vos Stages</h1>
         <ul class="row justify-content-center nav nav-tabs stage-nav-tabs">
@@ -20,9 +20,12 @@
                              alt="{{ stage.alt_attribute }}">
 
                         <div class="col-12 col-lg-6">
-                            <h4 class="stage col-12 "><i class="fas fa-calendar-alt"></i><span class="space">{{ stage.Debut }}</span></h4>
-                            <h4 class="stage col-12"><i class="fas fa-calendar-alt"></i><span class="space">{{ stage.Fin }}</span></h4>
-                            <h4 class="stage col-12"><i class="fas fa-basketball-ball "></i><span class="space">Activités proposées:</span>
+                            <h4 class="stage col-12 "><i {{ stage.name !='Mercredi' ? 'class="fas fa-calendar-alt stage-font-awesome"' }}></i><span class="space">{% if stage.name != 'Mercredi' %}Date de début
+                le {{ stage.start_date|date("d/m/Y")}} à {{ stage.start_time [:5] }}{% endif %}</span></h4>
+                            <h4 class="stage col-12"><i class="fas fa-calendar-alt stage-font-awesome"></i><span class="space">{% if stage.name == 'Mercredi' %}Tous les mercredis, hors vacances scolaires et jours fériés {% else %}
+                                        Date de fin
+                            le {{ stage.end_date|date("d/m/Y") }} à {{ stage.end_time[:5] }}{% endif %}</span></h4>
+                            <h4 class="stage col-12"><i class="fas fa-basketball-ball stage-font-awesome "></i><span class="space">Activités proposées:</span>
                             </h4>
                             <p><span class="space">{{ stage.description }}</span></p>
                             <div class="row justify-content-center mt-5">
@@ -33,5 +36,5 @@
             {% endfor %}
         </div>
     </section>
-{% endblock %}
+{#{% endblock %}#}
 
