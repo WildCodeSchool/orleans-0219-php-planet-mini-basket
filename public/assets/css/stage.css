@@ -20,6 +20,7 @@
 span.space {
     margin-left: 0.5rem;
     font-size: 0.9em;
+    color: black;
 }
 /* content margin*/
 .stage-margin{
@@ -37,4 +38,7 @@ h4.stage{
 
 p {
     font-size: 1em;
+}
+.stage-font-awesome{
+    color: #f0ad4e ;
 }
