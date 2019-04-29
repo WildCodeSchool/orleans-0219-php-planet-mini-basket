@@ -1,0 +1,19 @@
+<h1 class="text-center mt-1">Vos Actualités</h1>
+<table class="table mt-5">
+    <thead>
+    <tr>
+        <th class="text-center text-dark">title</th>
+        <th class="text-center text-dark">content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for content in news %}
+        <tr class="table-light">
+            <td class="text-dark">{{ content.news_title }}</td>
+            <td class="text-dark">{{ content.news_content }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+

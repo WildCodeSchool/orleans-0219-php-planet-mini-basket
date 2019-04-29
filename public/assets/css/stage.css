@@ -1,0 +1,44 @@
+/* boutton*/
+.btn-stage{
+    color: black;
+    background-color: #f0ad4e;
+    padding: 0.5rem 2rem;
+}
+.btn-stage:hover{
+
+    background-color: #f09334;
+}
+/*navs*/
+.stage-nav-tabs .nav-link.active{
+    background-color: #f0ad4e;
+}
+
+.stage-nav-tabs .nav-link:hover{
+    background-color: #f0ad4e;
+}
+/*font awesome*/
+span.space {
+    margin-left: 0.5rem;
+    font-size: 0.9em;
+    color: black;
+}
+/* content margin*/
+.stage-margin{
+    margin-top: 7rem;
+}
+
+h1.stage{
+    color: black;
+    margin: 0.4em;
+}
+
+h4.stage{
+    padding: 0.75rem 1rem;
+}
+
+p {
+    font-size: 1em;
+}
+.stage-font-awesome{
+    color: #f0ad4e ;
+}
