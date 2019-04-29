@@ -6,8 +6,13 @@ h2 {
     font-size: 3.5em;
 }
  p{
-     font-size: 1.4em;
+     font-size: 1em;
      font-family: ABeeZee;
+ }
+
+ body{
+     padding: 0;
+     margin: 0;
  }
 
 .banner{
@@ -149,10 +154,10 @@ section{
 .activities-pictures{
     height: 20vw;
     object-fit: cover;
+    width: 100%;
 }
 
 .activities-card{
-    max-width: 20vw;
     overflow: hidden;
     padding: 0;
     perspective: 1000px;
@@ -176,7 +181,7 @@ section{
 }
 
 .animate{
-    transition: 0.8s;
+    transition: 0.7s;
     transform-style: preserve-3d;
     position: relative;
 }
@@ -192,12 +197,35 @@ section{
 }
 
 .side-b {
-
     transform: rotateY(180deg);
     position: absolute;
     background-color: #f0ad4e;
-    font-size: 1.5vw;
+    height: 100%;
 }
+
+.activities-description {
+    text-align: center;
+    padding: 0.5vw;
+    font-size: 1vw;
+}
+
+.activities-section{
+    padding-top: 10vw;
+}
+
+@media screen and (max-width: 1590px) {
+    .activities-section{
+        padding-top: 10vw;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 770px) {
+    .activities-section{
+        padding-top: 25vw;
+    }
+}
+
+/* END OF ACTIVITIES */
 
 .logo{
     color: black;
