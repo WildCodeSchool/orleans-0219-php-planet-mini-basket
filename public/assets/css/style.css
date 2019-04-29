@@ -214,6 +214,12 @@ section{
     margin-top: 0;
 }
 
+.priceException{
+    font-size: 0.7em;
+    color: black;
+}
+
+
 .tarifsTHead{
     font-size: 1.5em;
 }
