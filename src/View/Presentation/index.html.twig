@@ -63,6 +63,16 @@
             {% endfor %}
         </div>
 
+        <h2 class="presentationH2">Qui-sommes-nous ?</h2>
+        <div class="row">
+            <div class="col-10">
+                <p class="presentation">{{ presentation[0]['who_are_we'] }}</p>
+            </div>
+            <div class="col-2">
+                <img src="{{ presentation[0]['img_presentation'] }}">
+            </div>
+        </div>
+
         <h2 class="presentationH2">Un peu d'histoire</h2>
         <div class="row">
             <div class="col-2">
@@ -70,8 +80,8 @@
             </div>
             <div class="col-10">
                 <p class="presentation">{{ history[0]['history'] }}</p>
-            </div>
         </div>
+
 
     </section>
 
