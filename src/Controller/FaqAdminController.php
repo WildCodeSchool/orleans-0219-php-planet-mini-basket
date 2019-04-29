@@ -15,30 +15,16 @@ class FaqAdminController extends AbstractController
         return $this->twig->render('FaqAdmin/index.html.twig', ['faqs' => $faqs]);
     }
 
-    public function add()
+    /**
+     * Handle item deletion
+     *
+     * @param int $id
+     */
+    public function delete(int $id)
     {
-        $error = [];
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $cleanData = new CleanData($_POST);
-            $data = $cleanData->trimData();
-            $faqManager = new FaqAdminManager();
-            var_dump($data);
-            if (empty($data['question_name'])) {
-                $error['question'] = 'Veuillez entrer votre question';
-            }
-            if (empty($data['answer_name'])) {
-                $error['answer_name'] = 'Veuillez entre votre réponse';
-            } else {
-                $faq = [
-                    'question_name' => $data['question_name'],
-                    'answer_name' => $data['answer_name']
-                ];
-                var_dump($faq);
-                $id = $faqManager->insert($faq);
-                header('Location:/FaqAdmin/show/' . $id);
-            }
-        }
-        return $this->twig->render('FaqAdmin/add.html.twig', ['error' => $error]);
+        $faqManager = new FaqAdminManager();
+        $faqManager->delete($id);
+        header('Location:/FaqAdmin/index');
     }
 
     public function show(int $id)
