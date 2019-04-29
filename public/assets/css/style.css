@@ -1,10 +1,11 @@
 h2 {
     font-size: 3.5em;
 }
- p{
-     font-size: 1.4em;
-     font-family: ABeeZee;
- }
+
+p{
+    font-size: 1.4em;
+    font-family: ABeeZee;
+}
 
 .banner{
     position: relative;
@@ -248,4 +249,46 @@ section{
 
 .ici {
     color: #f0ad4e;
+}
+
+.mapIframe{
+    width: 100%;
+    height: 100%;
+}
+
+.presentationModal .row{
+    text-align: center;
+    color: black;
+}
+
+.presentationCard{
+    background-color: white;
+}
+
+.presentationCardBody{
+    min-height: 11vw;
+}
+
+.presentationCardImg{
+    min-height: 15vw;
+    object-fit: cover;
+}
+
+.presentationCardTxt{
+    min-height: 5vw;
+}
+
+.presentationH1{
+    margin-top: 7vw;
+    font-size: 5em;
+    text-align: center;
+}
+
+.presentationH2{
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+}
+
+#presentation .presentation{
+    font-size: 1em;
 }
