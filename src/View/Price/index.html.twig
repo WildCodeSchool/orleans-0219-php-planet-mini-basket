@@ -3,8 +3,8 @@
 {% block title %}Tarifs{% endblock %}
 
 {% block content %}
-        <h1 class="tarifs">Tarifs</h1>
-        <section>
+    <section class="price">
+        <h1 class="tarifs text-center">Tarifs</h1>
             <div class="row">
                 {% for price in prices %}
                     <div class="col-md-6 col-lg-4 padding">
@@ -32,9 +32,9 @@
                                 <tr>
                                     <td class="tableDark">
                                         {% if price.start_date is not empty %}
-                                            Du {{ price.start_date }} au {{ price.end_date }}
+                                            Du {{ price.start_date|date('d/m/Y') }} au {{ price.end_date|date('d/m/Y') }}
                                         {% else %}
-                                            Tous les {{ price.name | lower }}s
+                                            <span class="priceException">Tous les mercredis, hors vacances scolaires et jours fériés</span>
                                         {% endif %}
                                     </td>
                                 </tr>

@@ -5,10 +5,11 @@ li.carousel-news {
 h2 {
     font-size: 3.5em;
 }
- p{
-     font-size: 1em;
-     font-family: ABeeZee;
- }
+
+p{
+    font-size: 1.4em;
+    font-family: ABeeZee;
+}
 
  body{
      padding: 0;
@@ -116,6 +117,15 @@ h2 {
     font-size: 2.5vw;
     color: black;
     opacity: 0.8;
+}
+
+#accordion{
+    position: relative;
+    padding: 1vw;
+}
+
+.card-header{
+    background-color:  #f0ad4e;
 }
 
 section{
@@ -294,10 +304,20 @@ section{
 
 
 .tarifs {
-    margin: 0.4em;
+    margin-top: 2rem;
     font-size: 5.5em;
     color: black;
 }
+
+.price {
+    margin-top: 0;
+}
+
+.priceException{
+    font-size: 0.7em;
+    color: black;
+}
+
 
 .tarifsTHead{
     font-size: 1.5em;
@@ -333,4 +353,46 @@ section{
 
 .ici {
     color: #f0ad4e;
+}
+
+.mapIframe{
+    width: 100%;
+    height: 100%;
+}
+
+.presentationModal .row{
+    text-align: center;
+    color: black;
+}
+
+.presentationCard{
+    background-color: white;
+}
+
+.presentationCardBody{
+    min-height: 11vw;
+}
+
+.presentationCardImg{
+    min-height: 15vw;
+    object-fit: cover;
+}
+
+.presentationCardTxt{
+    min-height: 5vw;
+}
+
+.presentationH1{
+    margin-top: 7vw;
+    font-size: 5em;
+    text-align: center;
+}
+
+.presentationH2{
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+}
+
+#presentation .presentation{
+    font-size: 1em;
 }
