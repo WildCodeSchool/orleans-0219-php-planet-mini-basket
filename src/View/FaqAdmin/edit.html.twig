@@ -1,7 +1,8 @@
 {% extends 'layoutAdmin.html.twig' %}
 
 {% block content %}
-    <h1>Edit item {{ faqs.question_name }}. {{ faqs.answer_name }}</h1>
     {% include 'FaqAdmin/_form.html.twig' %}
-    <a href="/FaqAdmin/show/{{ faqs.id }}">Back</a>
+    <div class="text-center">
+        <a href="/FaqAdmin/index" class="btn btn-primary">Retour</a>
+    </div>
 {% endblock %}
