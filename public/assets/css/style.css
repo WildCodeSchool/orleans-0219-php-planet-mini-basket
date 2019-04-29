@@ -2,37 +2,45 @@
 li.carousel-news {
     display: none;
 }
+h2 {
+    font-size: 3.5em;
+}
+ p{
+     font-size: 1.4em;
+     font-family: ABeeZee;
+ }
 
-.banner {
+.banner{
+    position: relative;
+    width: 100%;
     background-image: url("/assets/images/bannerProjet4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 25vw;
+    height: 30vw;
     filter: brightness(0.95);
     margin-top: 7vw;
-    background-position-y: -4.5vw;
 }
 
-.banner-title {
-    top: 8vw;
+.banner-title{
+    top: 10vw;
     position: absolute;
-    bottom: 60%;
-    left: 42%;
-    transform: rotate(270deg);
+    font-size: 5vw;
 }
 
-
-.banner-text {
-    top: 15vw;
+.banner-text{
+    top: 17vw;
     position: absolute;
     font-size: 2.5vw;
     color: black;
     opacity: 0.8;
 }
 
+
+
 .trainer {
     position: relative;
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(240, 173, 78, 0.9);
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 768px) {
@@ -41,12 +49,19 @@ li.carousel-news {
     }
 }
 
+
+
 .trainer img {
     width: 84%;
 }
 
+
 .trainer .title {
     width: 100%;
+    position: absolute;
+    bottom: 60%;
+    left: 42%;
+    transform: rotate(270deg);
 }
 
 .trainer .title h3 {
@@ -62,7 +77,7 @@ li.carousel-news {
 }
 
 .trainer .title h3 a:hover, .trainer .title h3 a:focus {
-    color: #f0ad4e;
+    color: white;
 }
 
 .trainer .title span {
@@ -90,18 +105,17 @@ li.carousel-news {
     font-size: 16px;
 }
 
-.intro-title{
-    font-size: 3em;
-}
-
-.intro-text{
-    font-size: 1.2em;
-    font-family: 'ABeeZee', sans-serif;
+.banner-text {
+    top: 17vw;
+    position: absolute;
+    font-size: 2.5vw;
+    color: black;
+    opacity: 0.8;
 }
 
 section{
-    padding-top: 3vw;
-    padding-bottom: 3vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
 }
 
 .info-header{
@@ -110,24 +124,24 @@ section{
 }
 
 .icon-info{
+    color: black;
     font-size: 3em;
     padding-bottom: 15px;
 }
 
 .info-text{
     text-align: center;
+    color: white;
 }
 
 .info-text-children{
     margin-top: 1vw;
 }
 
-.card-border{
-    border: solid 2px #f0ad4e;
-}
 
 .card-info{
     max-width: 20rem;
+    background-color: rgba(240, 173, 78, 0.9);
 }
 
 /* ACTIVITIES */
@@ -177,11 +191,103 @@ section{
     transform: rotateY(0deg);
 }
 
-.side-b{
+.side-b {
 
     transform: rotateY(180deg);
     position: absolute;
     background-color: #f0ad4e;
     font-size: 1.5vw;
+}
 
+.logo{
+    color: black;
+    font-weight:700;
+    font-size:30px;
+}
+
+.address span , .menu span{
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    padding:10px 0px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+.address li a , .menu li a{
+    color: black;
+    letter-spacing: 3px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.address li, .menu li{
+    margin:20px 0px;
+    list-style: none;
+}
+
+.address li a:hover , .menu li a:hover{
+    color: #f0ad4e;
+
+}
+
+.address .fa{
+    color: #f0ad4e;
+    margin-right: 10px;
+    font-size:18px;
+}
+
+.footerDown {
+    background-color: #f0ad4e;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.footer {
+    font-size: 0.8em;
+}
+
+
+.tarifs {
+    margin: 0.4em;
+    font-size: 5.5em;
+    color: black;
+}
+
+.tarifsTHead{
+    font-size: 1.5em;
+}
+
+.tableTitle{
+    background-color: rgba(240, 173, 78, 0.9);
+}
+
+.tableDark{
+    background-color: #f3bd72;
+    font-size: 1.1em;
+}
+
+.tableLight{
+    background-color: #f7d3a1;
+    font-size: 1.1em;
+}
+
+.padding{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.underline{
+    text-decoration: underline;
+    color: black;
+}
+
+.intro-text {
+    padding: 0.4em;
+}
+
+.ici {
+    color: #f0ad4e;
 }
