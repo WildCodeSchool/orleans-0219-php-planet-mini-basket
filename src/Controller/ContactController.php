@@ -84,8 +84,7 @@ class ContactController extends AbstractController
                     } catch (Exception $e) {
                         $_SESSION['mailNotSent'] = $e->getMessage();
                     }
-                    header('Location:/index');
-                    exit();
+                    return $this->twig->render('Home/index.html.twig');
                 }
             }
         }
