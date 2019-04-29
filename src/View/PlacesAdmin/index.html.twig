@@ -2,8 +2,35 @@
 
 
 {% block content %}
-<h1>Locaux</h1>
+    <h1>Locaux</h1>
 
-<div></div>
+    <div class="row placeTitle">
+        <div class="col-2">Lieu</div>
+        <div class="col-1">N°</div>
+        <div class="col-2">Rue</div>
+        <div class="col-1">Code Postal</div>
+        <div class="col-1">Ville</div>
+        <div class="col-3">Description</div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+
+    </div>
+    {% for place in places %}
+        <div class="row placeText">
+            <div class="col-2">{{ place.place_name }}</div>
+            <div class="col-1">{{ place.number }}</div>
+            <div class="col-2">{{ place.street }}</div>
+            <div class="col-1">{{ place.postalcode }}</div>
+            <div class="col-1">{{ place.city }}</div>
+            <div class="col-3">{{ place.description }}</div>
+            <div class="col-1">
+                <a href="#">Editer</a>
+            </div>
+            <div class="col-1">
+                <a href="#">Supprimer</a>
+            </div>
+        </div>
+    {% endfor %}
+
 
 {% endblock %}
