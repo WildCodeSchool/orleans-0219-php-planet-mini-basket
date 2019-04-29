@@ -1,84 +1,97 @@
+{#{% extends 'layoutAdmin.html.twig' %}#}
+
+{#{% block stylesheet %}#}
+{#<link href="/assets/css/admin.css" rel="stylesheet">#}
+{#{% endblock %}#}
+
+{#{% block title %}#}
+    {#Admin FAQ#}
+{#{% endblock %}#}
+
+{#{% block content %}#}
+    {#<div class="container  question">#}
+        {#<div class="row justify-content-center">#}
+            {#<h1 class="titre">Administration des FAQs</h1>#}
+        {#</div>#}
+        {#<div>#}
+            {#<div class="form-collapse">#}
+                {#<input type="radio" id="hide" name="toggle" checked="checked">#}
+                {#<label for="hide">Fermer</label>#}
+                {#<input type="radio" id="show" name="toggle">#}
+                {#<a href="FaqAdmin/add/"><label for="show">Ajouter une Question</label></a>#}
+            {#</div>#}
+        {#</div>#}
+        {#<div class="row justify-content-center">#}
+            {#<h2 class="titre2">Questions présentes sur le site :</h2>#}
+        {#</div>#}
+        {#<div class="row justify-content-center">#}
+            {#<div class="col-10">#}
+                {#<table class="table table-striped">#}
+                    {#<thead>#}
+                    {#<tr>#}
+                        {#<th scope="col-1"></th>#}
+                        {#<th scope="col-4">Question</th>#}
+                        {#<th scope="col-5">Réponse</th>#}
+                        {#<th scope="col-1">Editer</th>#}
+                        {#<th scope="col-1">Supprimer</th>#}
+                    {#</tr>#}
+                    {#</thead>#}
+                    {#<tbody>#}
+
+                    {#{% for faq in faqs %}#}
+
+                        {#<tr>#}
+                            {#<th scope="row"></th>#}
+                            {#<td>{{ faq.question_name }}</td>#}
+                            {#<td>{{ faq.answer_name }}</td>#}
+                            {#<td><a class="btn trigger"><i class="fas fa-pencil-ruler text-center"></i> Editer</a></td>#}
+                            {#<td>  <a class="btn trigger" id="modBtn"><i class="fas fa-trash-alt"></i>Supprimer</a>#}
+                                    {#<div id="modal" class="modal">#}
+                                        {#<div class="modal-content">#}
+                                            {#<div class="modal-header">#}
+                                                {#<h3 class="header-title">Supprimer</h3>#}
+                                                {#<div class="close fas fa-times"></div>#}
+                                            {#</div>#}
+                                            {#<div class="modal-body text-center">#}
+                                                {#<h3>Confirmer vous la suppresion de cet élèment ?</h3>#}
+                                                {#<a class="yes "><i class="fas fa-check"></i> Oui</a>#}
+                                                {#<a class="no "><i class="fas fa-times"></i> Non</a>#}
+                                            {#</div>#}
+                                        {#</div>#}
+                                    {#</div>#}
+
+                            {#</td>#}
+
+                        {#</tr>#}
+
+
+
+
+                    {#{% endfor %}#}
+
+                    {#</tbody>#}
+                {#</table>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+
+{#{% endblock %}#}
+
+
+{#{% block javascript %}#}
+{#<script src="/assets/js/indexAdmin.js" crossorigin="anonymous"></script>#}
+{#{% endblock %}#}
+
 {% extends 'layoutAdmin.html.twig' %}
 
-{% block stylesheet %}
-<link href="/assets/css/admin.css" rel="stylesheet">
-{% endblock %}
-
-{% block title %}
-    Admin FAQ
-{% endblock %}
-
 {% block content %}
-    <div class="container  question">
-        <div class="row justify-content-center">
-            <h1 class="titre">Administration des FAQs</h1>
-        </div>
-        <div>
-            <div class="form-collapse">
-                <input type="radio" id="hide" name="toggle" checked="checked">
-                <label for="hide">Fermer</label>
-                <input type="radio" id="show" name="toggle">
-                <a href="add/"><label for="show">Ajouter une Question</label></a>
-                {% include 'Item/add.html.twig' %}
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <h2 class="titre2">Questions présentes sur le site :</h2>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-10">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th scope="col-1"></th>
-                        <th scope="col-4">Question</th>
-                        <th scope="col-5">Réponse</th>
-                        <th scope="col-1">Editer</th>
-                        <th scope="col-1">Supprimer</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    {% for faq in faqs %}
-
-                        <tr>
-                            <th scope="row"></th>
-                            <td>{{ faq.question_name }}</td>
-                            <td>{{ faq.answer_name }}</td>
-                            <td><a class="btn trigger"><i class="fas fa-pencil-ruler text-center"></i> Editer</a></td>
-                            <td>  <a class="btn trigger" id="modBtn"><i class="fas fa-trash-alt"></i>Supprimer</a>
-                                    <div id="modal" class="modal">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h3 class="header-title">Supprimer</h3>
-                                                <div class="close fas fa-times"></div>
-                                            </div>
-                                            <div class="modal-body text-center">
-                                                <h3>Confirmer vous la suppresion de cet élèment ?</h3>
-                                                <a class="yes "><i class="fas fa-check"></i> Oui</a>
-                                                <a class="no "><i class="fas fa-times"></i> Non</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                            </td>
-
-                        </tr>
-
-
-
-
-                    {% endfor %}
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-{% endblock %}
-
-
-{% block javascript %}
-<script src="/assets/js/indexAdmin.js" crossorigin="anonymous"></script>
+    <h1>Items</h1>
+    <ul>
+        {% for faqs in faqs %}
+            <li><a href="/FaqAdmin/show/{{ faqs.id }}">{{ faqs.question_name }} <br/> {{ faqs.answer_name }}</a></li>
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </ul>
+    <a href="/FaqAdmin/add">Ajouter</a>
 {% endblock %}

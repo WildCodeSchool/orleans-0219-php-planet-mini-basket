@@ -1,0 +1,10 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block content %}
+    <h1>Faq {{ faqs.id }}</h1>
+    <p>{{ faqs.question_name }}. {{ faqs.answer_name }}</p>
+    <a href="/FaqAdmin/edit/{{ faqs.id }}">Edit</a>
+    <a href="/FaqAdmin/delete/{{ faqs.id }}">Supprimer</a>
+    <a href="/FaqAdmin/index">Back</a>
+{% endblock %}
+

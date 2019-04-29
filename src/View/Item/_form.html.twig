@@ -1,8 +1,6 @@
-
-    <form method="post" action="/FaqAdmin/add">
-        <label>Votre Question :</label>
-        <textarea name="question"></textarea>
-        <label>Votre Réponse :</label>
-        <textarea name="answer"></textarea>
-        <button type="submit">Ajouter</button>
-    </form>
+<form method="post">
+    <input type="hidden" value="{{ faq.id }}" name="id">
+    <input type="text" value="{{ faq.question_name }}" name="question_name">
+    <input type="text" value="{{ faq.answer_name }}" name="answer_name">
+    <input type="submit" value="Valider">
+</form>
