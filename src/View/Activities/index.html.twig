@@ -3,8 +3,8 @@
     <section>
         <div class="row justify-content-around">
         {% for activities in activity %}
-            <div class="wrap">
-                <div class="card animate activities-card mb-3 col-6">
+            <div class="wrap col-sm-10 col-md-4">
+                <div class="card animate activities-card">
                     <div class="card-body activities-card side-a">
                         <h3 class="activities-title">{{ activities.name }}</h3>
                         <img src="{{ activities.picture }}" alt="{{ activities.alt }}" class="activities-pictures">
