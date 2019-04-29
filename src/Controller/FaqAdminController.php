@@ -7,8 +7,6 @@ use App\tools\CleanData;
 
 class FaqAdminController extends AbstractController
 {
-
-
     public function index()
     {
         $faqManager = new FaqAdminManager();
@@ -16,7 +14,6 @@ class FaqAdminController extends AbstractController
 
         return $this->twig->render('FaqAdmin/index.html.twig', ['faqs' => $faqs]);
     }
-
 
     public function add()
     {
@@ -41,9 +38,8 @@ class FaqAdminController extends AbstractController
                 header('Location:/FaqAdmin/show/' . $id);
             }
         }
-        return $this->twig->render('FaqAdmin/add.html.twig', ['error'=>$error]);
+        return $this->twig->render('FaqAdmin/add.html.twig', ['error' => $error]);
     }
-
 
     public function show(int $id)
     {
@@ -51,32 +47,4 @@ class FaqAdminController extends AbstractController
         $faqs = $faqManager->selectOneById($id);
         return $this->twig->render('FaqAdmin/show.html.twig', ['faqs' => $faqs]);
     }
-
-
-    public function edit(int $id): string
-    {
-        $faqManager = new FaqAdminManager();
-        $faqs = $faqManager->selectOneById($id);
-
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $faqs['question_name'] = $_POST['question_name'];
-            $faqs['answer_name'] = $_POST['answer_name'];
-            $faqManager->update($faqs);
-        }
-
-        return $this->twig->render('FaqAdmin/edit.html.twig', ['faqs' => $faqs]);
-    }
-
-    /**
-     * Handle item deletion
-     *
-     * @param int $id
-     */
-    public function delete(int $id)
-    {
-        $faqManager = new FaqAdminManager();
-        $faqManager->delete($id);
-        header('Location:/FaqAdmin/index');
-    }
 }
-

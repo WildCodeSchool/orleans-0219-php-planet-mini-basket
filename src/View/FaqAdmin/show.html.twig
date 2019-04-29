@@ -1,10 +1,20 @@
 {% extends 'layoutAdmin.html.twig' %}
 
 {% block content %}
-    <h1>Faq {{ faqs.id }}</h1>
-    <p>{{ faqs.question_name }}. {{ faqs.answer_name }}</p>
-    <a href="/FaqAdmin/edit/{{ faqs.id }}">Edit</a>
-    <a href="/FaqAdmin/delete/{{ faqs.id }}">Supprimer</a>
-    <a href="/FaqAdmin/index">Back</a>
+
+    <div class="card text-center">
+        <div class="card-header">
+            FAQ {{ faqs.id }}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ faqs.question_name }}</h5>
+            <p class="card-text">
+                {{ faqs.answer_name }}
+            </p>
+            <a href="#!" class="btn btn-primary">Éditer</a>
+            <a href="#!" class="btn btn-primary">Supprimer</a>
+            <a href="/FaqAdmin/index" class="btn btn-primary">Retour</a>
+        </div>
+    </div>
 {% endblock %}
 
