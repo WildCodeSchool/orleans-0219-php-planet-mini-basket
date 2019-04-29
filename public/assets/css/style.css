@@ -167,11 +167,10 @@ section{
 
 .activities-title{
     position: absolute;
-    font-size: 3vw;
+    font-size: 2.5vw;
     color: #f0ad4e;
     font-weight: bold;
     margin-top: 15vw;
-    left: 2vw;
 }
 
 .wrap:hover .animate{
