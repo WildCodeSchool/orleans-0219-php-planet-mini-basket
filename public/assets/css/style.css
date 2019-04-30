@@ -293,8 +293,19 @@ section{
 .presentationH2{
     margin-top: 3vw;
     margin-bottom: 1vw;
+
 }
 
 #presentation .presentation{
     font-size: 1em;
+}
+
+.btn-presentation{
+    color: black;
+    background-color: #f0ad4e;
+    padding: 0.5rem 2rem;
+}
+.btn-presentation:hover{
+
+    background-color: #f09334;
 }

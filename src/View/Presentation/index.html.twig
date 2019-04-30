@@ -7,7 +7,7 @@
 
 
     <section id="presentation">
-        <h2>Locaux</h2>
+        <h2 class="presentationH2">Locaux</h2>
         <div class="row">
             {% for place in places %}
                 <div class="col-12 col-md-6 col-lg-4">
@@ -17,7 +17,7 @@
                         <div class="card-body presentationCardBody">
                             <h5 class="card-title">{{ place.place_name }}</h5>
                             <p class="card-text presentationCardTxt">{{ place.description }}</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                            <button type="button" class="btn btn-presentation btn-lg" data-toggle="modal"
                                     data-target="#id{{ place.id }}">
                                 Plus d'informations
                             </button>
