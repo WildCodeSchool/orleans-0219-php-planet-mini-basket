@@ -3,7 +3,7 @@ li.carousel-news {
     display: none;
 }
 .news-carousel{
-    height: 100px;
+    height: 5vw;
 }
 
 h2 {
@@ -438,4 +438,17 @@ section{
 
 #presentation .presentation{
     font-size: 1em;
+}
+@media screen and (max-width: 1076px) {
+    .news-carousel{
+        height: 15vw;
+    }
+}@media screen and (max-width: 730px) {
+    .news-carousel{
+        height: 35vw;
+    }
+}@media screen and (max-width: 450px) {
+    .news-carousel{
+        height: 150vw;
+    }
 }
