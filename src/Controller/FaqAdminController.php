@@ -30,15 +30,10 @@ class FaqAdminController extends AbstractController
                     'answer_name' => $data['answer_name']
                 ];
                 $id = $faqManager->insert($faq);
-                header('Location:/FaqAdmin/show/' . $id);
+                header('Location:/FaqAdmin/index/');
             }
         }
         return $this->twig->render('FaqAdmin/add.html.twig', ['error' => $errors]);
     }
-    public function show(int $id)
-    {
-        $faqManager = new FaqManager();
-        $faqs = $faqManager->selectOneById($id);
-        return $this->twig->render('FaqAdmin/show.html.twig', ['faqs' => $faqs]);
-    }
+
 }

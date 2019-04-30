@@ -35,6 +35,7 @@ class NewsAdminController extends AbstractController
                 ];
                 $id = $newsManager->insert($news);
                 header('Location:/NewsAdmin/show/' . $id);
+                exit;
             }
         }
         return $this->twig->render('NewsAdmin/add.html.twig', ['error' => $error]);
@@ -45,5 +46,20 @@ class NewsAdminController extends AbstractController
         $newsManager = new NewsManager();
         $news = $newsManager->selectOneById($id);
         return $this->twig->render('NewsAdmin/show.html.twig', ['news' => $news]);
+    }
+    public function edit(int $id): string
+    {
+        $newsManager = new NewsManager();
+        $news = $newsManager->selectOneById($id);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $cleanData = new CleanData($_POST);
+            $data = $cleanData->trimData();
+            $news['title'] = $data['title'];
+            $news['content'] = $data['content'];
+            $newsManager->update($news);
+            header('location:/NewsAdmin/show/'. $id);
+            exit;
+        }
+        return $this->twig->render('NewsAdmin/edit.html.twig', ['news' => $news]);
     }
 }
