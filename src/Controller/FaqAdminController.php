@@ -19,6 +19,7 @@ class FaqAdminController extends AbstractController
         $faqManager = new FaqManager();
         $faqManager->delete($id);
         header('Location:/FaqAdmin/index');
+        exit();
     }
 
 }
