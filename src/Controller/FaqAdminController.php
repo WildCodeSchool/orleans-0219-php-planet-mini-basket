@@ -20,10 +20,5 @@ class FaqAdminController extends AbstractController
         $faqManager->delete($id);
         header('Location:/FaqAdmin/index');
     }
-    public function show(int $id)
-    {
-        $faqManager = new FaqManager();
-        $faqs = $faqManager->selectOneById($id);
-        return $this->twig->render('FaqAdmin/show.html.twig', ['faqs' => $faqs]);
-    }
+
 }
