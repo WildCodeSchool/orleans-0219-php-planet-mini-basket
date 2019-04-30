@@ -58,6 +58,6 @@ class NewsAdminController extends AbstractController
             $newsManager->update($news);
         }
 
-        return $this->twig->render('Admin/news/edit.html.twig', ['news' => $news]);
+        return $this->twig->render('NewsAdmin/edit.html.twig', ['news' => $news]);
     }
 }
