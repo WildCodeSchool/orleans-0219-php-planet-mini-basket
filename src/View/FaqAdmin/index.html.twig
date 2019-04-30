@@ -1,7 +1,8 @@
+{% extends 'layoutAdmin.html.twig' %}
+{% block stylesheet %}
+    <link href="/assets/css/admin.css" rel="stylesheet">
+{% endblock %}
 
-{% extends 'layout.html.twig' %}
-
-{% block stylesheet %}{% endblock %}
 
 {% block title %}
     Admin FAQ
@@ -10,18 +11,23 @@
 {% block content %}
     <div class="container  question">
         <div class="row justify-content-center">
-            <h1>Administration des FAQs</h1>
+            <h1 class="titre">Administration des FAQs</h1>
+        </div>
+        <div class="text-center">
+            <a href="add/" class="btn btn-primary"><label for="show">Ajouter une Question</label></a>
+        </div>
+        <div class="row justify-content-center">
+            <h2 class="titre2">Questions présentes sur le site :</h2>
         </div>
         <div class="row justify-content-center">
             <div class="col-10">
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th scope="col-1">ID</th>
+                        <th scope="col-1"></th>
                         <th scope="col-4">Question</th>
                         <th scope="col-5">Réponse</th>
                         <th scope="col-1">Editer</th>
-                        <th scope="col-1">Supprimer</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -29,12 +35,15 @@
                     {% for faq in faqs %}
 
                         <tr>
-                            <th scope="row">{{ faq.id }}</th>
+                            <th scope="row"></th>
                             <td>{{ faq.question_name }}</td>
                             <td>{{ faq.answer_name }}</td>
-                            <td><a href="/faq/edit/{{ faq.id }}">Editer</a></td>
-                            <td><a href="/faq/delete/{{faq.id}}">Supprimer</a></td>
+                            <td><a class="btn trigger" href="/FaqAdmin/show/{{ faq.id }}"><i class="fas fa-eye"></i></i> Détails</a></td>
+
                         </tr>
+
+
+
 
                     {% endfor %}
 
