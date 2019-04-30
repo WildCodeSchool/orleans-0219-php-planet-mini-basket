@@ -9,12 +9,7 @@ class FaqAdminController extends AbstractController
         $faqs = $faqManager->selectAll();
         return $this->twig->render('FaqAdmin/index.html.twig', ['faqs' => $faqs]);
     }
-    public function show(int $id)
-    {
-        $faqManager = new FaqManager();
-        $faqs = $faqManager->selectOneById($id);
-        return $this->twig->render('FaqAdmin/show.html.twig', ['faqs' => $faqs]);
-    }
+
     public function edit(int $id): string
     {
         $faqManager = new FaqManager();
