@@ -1,26 +1,29 @@
 <?php
-
-
 namespace App\Controller;
-
-use App\Model\FaqManager;
-
+use App\Model\FaqAdminManager;
 class FaqAdminController extends AbstractController
 {
-    /**
-     * Display home page
-     *
-     * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
-     */
     public function index()
     {
-        $faqManager = new FaqManager();
+        $faqManager = new FaqAdminManager();
         $faqs = $faqManager->selectAll();
-        return $this->twig->render('FaqAdmin/index.html.twig', [
-            'faqs' => $faqs
-        ]);
+        return $this->twig->render('FaqAdmin/index.html.twig', ['faqs' => $faqs]);
+    }
+    /**
+     * Handle item deletion
+     *
+     * @param int $id
+     */
+    public function delete(int $id)
+    {
+        $faqManager = new FaqAdminManager();
+        $faqManager->delete($id);
+        header('Location:/FaqAdmin/index');
+    }
+    public function show(int $id)
+    {
+        $faqManager = new FaqAdminManager();
+        $faqs = $faqManager->selectOneById($id);
+        return $this->twig->render('FaqAdmin/show.html.twig', ['faqs' => $faqs]);
     }
 }
