@@ -15,12 +15,17 @@ h2 {
     border-bottom: 1px solid;
     display: block;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1vw;
     letter-spacing: 3px;
     width: 65vw;
     margin-left: 20vw;
 }
-
+p.footer{
+    font-size: 0.90vw;
+}
+.link-contact{
+    font-size: 1vw;
+}
 .li-contact a:hover{
     color: #f0ad4e;
     text-decoration: none;
@@ -29,7 +34,7 @@ h2 {
 .fa{
     color: #f0ad4e;
     margin-right: 10px;
-    font-size:18px;
+    font-size:25px;
 }
 
 p{
