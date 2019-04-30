@@ -30,8 +30,7 @@ p.footer{
 .link-contact{
     font-size: 1vw;
 }
-.li-contact a:hover{
-    color: #f0ad4e;
+.li-contact{
     text-decoration: none;
 }
 
