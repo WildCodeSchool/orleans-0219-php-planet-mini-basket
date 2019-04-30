@@ -25,31 +25,33 @@
                     </div>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="id{{ place.id }}" tabindex="-1" role="dialog"
+                    <div class="modal fade presentationModalSize" id="id{{ place.id }}" tabindex="-1" role="dialog"
                          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                             <div class="modal-content presentationModal">
-                                <div class="modal-header">
+                                <div class="modal-header presModalTitle">
                                     <h5 class="modal-title" id="exampleModalLongTitle">{{ place.place_name }}</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body presModalBody">
                                     <div class="container-fluid">
                                         <div class="row justify-content-center align-items-center">
                                             <div class="col-12 col-md-6">
-                                                <img class="card-img-top" src="/assets/images/{{ place.place_image1 }}"
+                                                <img class="card-img-top presModalImg" src="/assets/images/{{ place.place_image1 }}"
                                                      alt="Card image cap">
                                             </div>
                                             <div class="col-12 col-md-6">
-                                                {{ place.description }}
+                                                <p>{{ place.description }}</p>
                                             </div>
-                                            <div class="col-12 col-md-6">
-                                                <p>{{ place.number ~ " " ~ place.street }}</p>
+                                            <div class="col-12 col-md-6 presMar">
+                                                <p>
+                                                    <i class="fas fa-map-marker-alt"></i>
+                                                    {{ place.number ~ " " ~ place.street }}</p>
                                                 <p>{{ place.postalcode ~ " " ~ place.city }}</p>
                                             </div>
-                                            <div class="col-12 col-md-6">
+                                            <div class="col-12 col-md-6 presMar">
                                                 <iframe class="mapIframe"
                                                         src="{{ place.map }}"
                                                         frameborder="0" style="border:0" allowfullscreen></iframe>

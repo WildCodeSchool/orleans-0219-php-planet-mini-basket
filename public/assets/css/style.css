@@ -396,8 +396,8 @@ section{
 }
 
 .mapIframe{
-    width: 100%;
-    height: 100%;
+    width: 25vw;
+    height: 17vw;
 }
 
 .presentationModal .row{
@@ -407,6 +407,11 @@ section{
 
 .presentationCard{
     background-color: white;
+}
+
+.card-img-top{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 }
 
 .presentationCardBody{
@@ -444,6 +449,23 @@ section{
     padding: 0.5rem 2rem;
 }
 .btn-presentation:hover{
+    background-color: #f0ad4e;
+}
 
-    background-color: #f09334;
+.presModalTitle{
+    background-color: #f0ad4e;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.presModalBody{
+    height: 40vw;
+}
+
+.presMar{
+    margin-top: 1vw;
+}
+
+.presMar i{
+    color: #f0ad4e;
 }
