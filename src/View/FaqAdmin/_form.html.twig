@@ -1,3 +1,4 @@
+
 <div class="container">
 
     <h1 class="brand"><span>Ajout de contenu FAQ</span></h1>
@@ -13,14 +14,19 @@
             <input type="hidden" value="{{ faqs.id }}" name="id">
             <p>
                 <label>Votre Question : </label>
+
+                <span class="text-danger" >{{ error.title ? error['question_name'] }}</span>
+
                 <input type="text" value="{{ faqs.question_name }}" name="question_name">
             </p>
-            <p>
-                <label>Votre Réponse :</label>
+         
+               <p>
+                 <span class="text-danger" >{{ error.title ? error['answer_name'] }}</span>
                 <input type="text" value="{{ faqs.answer_name }}" name="answer_name">
             </p>
             <p class="full">
-                <button type="submit">Envoyez</button>
+                <button type="submit">Submit</button>
+
             </p>
             </form>
         </div>

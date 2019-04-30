@@ -4,6 +4,7 @@
     <link href="/assets/css/admin.css" rel="stylesheet">
 {% endblock %}
 
+
 {% block title %}
     Admin FAQ
 {% endblock %}
@@ -13,6 +14,10 @@
         <div class="row justify-content-center">
             <h1 class="titre">Administration des FAQs</h1>
         </div>
+        <div class="text-center">
+            <a href="add/" class="btn btn-primary"><label for="show">Ajouter une Question</label></a>
+        </div>
+
         <div class="row justify-content-center">
             <h2 class="titre2">Questions présentes sur le site :</h2>
         </div>
@@ -37,7 +42,6 @@
                             <td>{{ faq.answer_name }}</td>
                             <td><a class="btn trigger" href="/FaqAdmin/edit/{{ faq.id }}"><i class="fas fa-pencil-ruler"></i> Éditer</a></td>
                             <td><a class="btn trigger" href="/FaqAdmin/show/{{ faq.id }}"><i class="fas fa-trash-alt"></i> Supprimer</a></td>
-
                         </tr>
 
 

@@ -5,40 +5,46 @@
 {% block content %}
     <section class="stage justify-content-center">
         <h1 class="text-center stage display-2">Nos Stages</h1>
-        <ul class="row justify-content-center nav nav-tabs stage-nav-tabs">
-            {% for stage in stages %}
-                <li class="nav-item">
-                    <a class="nav-link {{ loop.first ? 'active' }}" data-toggle="tab"
-                       href="#stage{{ stage.id }}">{{ stage.name }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-        <div id="myTabContent" class="tab-content stage-margin">
-            {% for stage in stages %}
-                <div class="tab-pane fade {{ loop.first  ? 'active show' }}" id="stage{{ stage.id }}">
-                    <div class="row justify-content-center">
+        <div class="jumbotron">
+            <ul class="row justify-content-center nav nav-tabs stage-nav-tabs ">
+                {% for stage in stages %}
+                    <li class="nav-item">
+                        <a class="nav-link {{ loop.first ? 'active' }}" data-toggle="tab"
+                           href="#stage{{ stage.id }}">{{ stage.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <div id="myTabContent" class="tab-content stage-margin">
+                {% for stage in stages %}
+                    <div class="tab-pane fade {{ loop.first  ? 'active show' }}" id="stage{{ stage.id }}">
+                        <div class="row justify-content-center">
 
-                        <img src="/assets/images/stages/{{ stage.img_src }}" height="300px"
-                             alt="{{ stage.alt_attribute }}">
-
-                        <div class="col-12 col-lg-6">
-                            <h4 class="stage col-12 "><i {{ stage.name !='Mercredi' ? 'class="fas fa-calendar-alt stage-font-awesome"' }}></i><span class="space">{% if stage.name != 'Mercredi' %}Date de début
-                le {{ stage.start_date|date("d/m/Y")}} à {{ stage.start_time [:5] }}{% endif %}</span></h4>
-                            <h4 class="stage col-12"><i class="fas fa-calendar-alt stage-font-awesome"></i><span class="space">{% if stage.name == 'Mercredi' %}Tous les mercredis, hors vacances scolaires et jours fériés {% else %}
-                                        Date de fin
-                                        le {{ stage.end_date|date("d/m/Y") }} à {{ stage.end_time[:5] }}{% endif %}</span></h4>
-                            <h4 class="stage col-12"><i class="fas fa-basketball-ball stage-font-awesome "></i><span class="space">Activités proposées:</span>
-                            </h4>
-                            <p><span class="space">{{ stage.description }}</span></p>
-                            <div class="row justify-content-center mt-5">
-                                <a href="/Prices/index">
-                                    <button type="button" class="btn btn-stage btn-lg">Tarifs</button>
-                                </a>
+                            <img src="/assets/images/stages/{{ stage.img_src }}" height="300px"
+                                 alt="{{ stage.alt_attribute }}">
+                            <div class="col-12 col-lg-6">
+                                <h4 class="stage col-12 ">
+                                    <i {{ stage.name !='Mercredi' ? 'class="fas fa-calendar-alt stage-font-awesome"' }}></i><span
+                                            class="space">{% if stage.name != 'Mercredi' %}Date de début
+                le {{ stage.start_date|date("d/m/Y") }} à {{ stage.start_time [:5] }}{% endif %}</span></h4>
+                                <h4 class="stage col-12"><i class="fas fa-calendar-alt stage-font-awesome"></i><span
+                                            class="space">{% if stage.name == 'Mercredi' %}Tous les mercredis, hors vacances scolaires et jours fériés {% else %}
+                                            Date de fin
+                                            le {{ stage.end_date|date("d/m/Y") }} à {{ stage.end_time[:5] }}{% endif %}</span>
+                                </h4>
+                                <h4 class="stage col-12"><i class="fas fa-basketball-ball stage-font-awesome "></i><span
+                                            class="space">Activités proposées:</span>
+                                </h4>
+                                <p><span class="space">{{ stage.description }}</span></p>
+                                <div class="row justify-content-center mt-5">
+                                    <a href="/Price/index">
+                                        <button type="button" class="btn btn-stage btn-lg">Tarifs</button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
     </section>
 {% endblock %}
