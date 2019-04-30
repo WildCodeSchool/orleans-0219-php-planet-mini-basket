@@ -13,9 +13,14 @@
 </head>
 
 <body>
+
 <header>
 {% include '_navbarAdmin.htm.twig' %}
 </header>
+
+<main class="container-fluid">
+{% block content %}{% endblock %}
+</main>
 
 {% block content %}{% endblock %}
 
