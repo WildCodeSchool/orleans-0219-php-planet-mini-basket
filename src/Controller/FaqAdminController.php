@@ -30,7 +30,8 @@ class FaqAdminController extends AbstractController
                     'answer_name' => $data['answer_name']
                 ];
                 $id = $faqManager->insert($faq);
-                header('Location:/FaqAdmin/show/' . $id);
+                header('Location:/FaqAdmin/index');
+                exit();
             }
         }
         return $this->twig->render('FaqAdmin/add.html.twig', ['error' => $errors]);
