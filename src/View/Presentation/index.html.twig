@@ -39,7 +39,7 @@
                                     <div class="container-fluid">
                                         <div class="row justify-content-center align-items-center">
                                             <div class="col-12 col-md-6">
-                                                <img class="card-img-top" src="{{ place.place_image1 }}"
+                                                <img class="card-img-top" src="/assets/images/{{ place.place_image1 }}"
                                                      alt="Card image cap">
                                             </div>
                                             <div class="col-12 col-md-6">
@@ -51,7 +51,7 @@
                                             </div>
                                             <div class="col-12 col-md-6">
                                                 <iframe class="mapIframe"
-                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2674.7199083191276!2d1.9210928513412344!3d47.90310627533898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4e4b5aed2d39b%3A0x3d03b03031cbf16f!2s9+Rue+Henri+Lavedan%2C+45000+Orl%C3%A9ans!5e0!3m2!1sfr!2sfr!4v1556271319680!5m2!1sfr!2sfr"
+                                                        src="{{ place.map }}"
                                                         frameborder="0" style="border:0" allowfullscreen></iframe>
                                             </div>
                                         </div>
@@ -67,7 +67,6 @@
                 </div>
             {% endfor %}
         </div>
-
         <h2 class="presentationH2">Qui-sommes-nous ?</h2>
         <div class="row">
             <div class="col-10">
