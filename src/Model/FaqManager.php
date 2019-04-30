@@ -19,6 +19,16 @@ class FaqManager extends AbstractManager
     }
 
     /**
+     * @param int $id
+     */
+    public function delete(int $id): void
+    {
+        $statement = $this->pdo->prepare("DELETE FROM $this->table WHERE id=:id");
+        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement->execute();
+      
+    }
+  
      * @param array $item
      * @return bool
      */
@@ -31,6 +41,7 @@ class FaqManager extends AbstractManager
         return $statement->execute();
     }
   
+
     public function insert(array $news): int
     {
         // prepared request
@@ -41,5 +52,6 @@ class FaqManager extends AbstractManager
         if ($statement->execute()) {
             return (int)$this->pdo->lastInsertId();
         }
+
     }
 }

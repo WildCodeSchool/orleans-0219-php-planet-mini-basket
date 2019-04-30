@@ -35,8 +35,32 @@
                             <th scope="row"></th>
                             <td>{{ faq.question_name }}</td>
                             <td>{{ faq.answer_name }}</td>
-                            <td><a class="btn trigger" href="/FaqAdmin/edit/{{ faq.id }}"><i class="fas fa-pencil-ruler"></i> Éditer</a></td>
-                            <td><a class="btn trigger" href="/FaqAdmin/show/{{ faq.id }}"><i class="fas fa-trash-alt"></i> Supprimer</a></td>
+
+                            <td><a class="btn trigger" href="/"><i class="fas fa-pencil-ruler"></i> Éditer</a></td>
+                            <td><button type="button" class="btn btn-trigger" data-toggle="modal" data-target="#basicExampleModal{{ faq.id }}">
+                                    <i class="fas fa-trash-alt"></i> Supprimer
+                                </button>
+                                <div class="modal fade" id="basicExampleModal{{ faq.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel{{ faq.id }}"
+                                     aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content"> 
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel{{ faq.id }}">FAQ {{ faq.id }}</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Confirmez-vous la suppression de cet élèment ?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                                <a href="/FaqAdmin/delete/{{ faq.id }}"  class="btn btn-primary">Supprimer</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div></td>
+
                         </tr>
 
 

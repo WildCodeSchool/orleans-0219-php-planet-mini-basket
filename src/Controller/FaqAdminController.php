@@ -1,6 +1,5 @@
 <?php
 namespace App\Controller;
-
 use App\Model\FaqManager;
 use App\tools\CleanData;
 
@@ -27,9 +26,21 @@ class FaqAdminController extends AbstractController
         }
         return $this->twig->render('FaqAdmin/edit.html.twig', ['faqs' => $faqs]);
     }
-
+    
+  /**
+     * Handle item deletion
+     *
+     * @param int $id
+     */
+    public function delete(int $id)
+    {
+        $faqManager = new FaqManager();
+        $faqManager->delete($id);
+        header('Location:/FaqAdmin/index');
+        exit();
     }
-    public function add()
+
+public function add()
     {
         $errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -54,3 +65,4 @@ class FaqAdminController extends AbstractController
         return $this->twig->render('FaqAdmin/add.html.twig', ['error' => $errors]);
     }
 }
+
