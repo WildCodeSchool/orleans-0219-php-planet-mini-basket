@@ -13,7 +13,6 @@ class ContactController extends AbstractController
 {
     public function index()
     {
-        session_start();
         $errors=[];
         $cleanPost=[];
         $mailSent="";
