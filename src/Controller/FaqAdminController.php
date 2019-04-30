@@ -11,6 +11,23 @@ class FaqAdminController extends AbstractController
         $faqManager = new FaqManager();
         $faqs = $faqManager->selectAll();
         return $this->twig->render('FaqAdmin/index.html.twig', ['faqs' => $faqs]);
+
+    }
+
+    public function edit(int $id): string
+    {
+        $faqManager = new FaqManager();
+        $faqs = $faqManager->selectOneById($id);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $faqs['question_name'] = $_POST['question_name'];
+            $faqs['answer_name'] = $_POST['answer_name'];
+            $faqManager->update($faqs);
+            header('Location:/FaqAdmin/index/');
+            exit();
+        }
+        return $this->twig->render('FaqAdmin/edit.html.twig', ['faqs' => $faqs]);
+    }
+
     }
     public function add()
     {
@@ -31,9 +48,9 @@ class FaqAdminController extends AbstractController
                 ];
                 $id = $faqManager->insert($faq);
                 header('Location:/FaqAdmin/index/');
+                exit();
             }
         }
         return $this->twig->render('FaqAdmin/add.html.twig', ['error' => $errors]);
     }
-
 }
