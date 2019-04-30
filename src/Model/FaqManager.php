@@ -27,6 +27,21 @@ class FaqManager extends AbstractManager
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();
       
+    }
+  
+     * @param array $item
+     * @return bool
+     */
+    public function update(array $faqs):bool
+    {
+        $statement = $this->pdo->prepare("UPDATE $this->table SET `question_name` = :question_name, `answer_name` = :answer_name WHERE id=:id");
+        $statement->bindValue('id', $faqs['id'], \PDO::PARAM_INT);
+        $statement->bindValue('question_name', $faqs['question_name'], \PDO::PARAM_STR);
+        $statement->bindValue('answer_name', $faqs['answer_name'], \PDO::PARAM_STR);
+        return $statement->execute();
+    }
+  
+
     public function insert(array $news): int
     {
         // prepared request
