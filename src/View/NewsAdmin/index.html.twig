@@ -1,19 +1,23 @@
+{% extends 'layoutAdmin.html.twig' %}
+{% block content %}
 <h1 class="text-center mt-1">Vos Actualités</h1>
-<table class="table mt-5">
+    <div class="row justify-content-center mt-5">
+    <a href="/NewsAdmin/add" class="btn btn-primary">Ajouter</a>
+    </div>
+<table class="table table-striped table-bordered mt-5">
     <thead>
     <tr>
-        <th class="text-center text-dark">title</th>
-        <th class="text-center text-dark">content</th>
+        <th class="text-center text-dark">Titre</th>
+        <th class="text-center text-dark">Description</th>
     </tr>
     </thead>
     <tbody>
     {% for content in news %}
-        <tr class="table-light">
+        <tr>
             <td class="text-dark">{{ content.news_title }}</td>
             <td class="text-dark">{{ content.news_content }}</td>
         </tr>
     {% endfor %}
     </tbody>
 </table>
-
-
+{% endblock %}
