@@ -1,0 +1,32 @@
+
+
+<div class="container">
+
+    <h1 class="brand"><span>Ajout de contenu FAQ</span></h1>
+
+    <div class="wrapper">
+        <div class="company-info">
+            <h3>Planète Mini Basket</h3>
+        </div>
+        <div class="contact">
+            <h3>Ajouter une question à la section FAQ</h3>
+
+            <form id="contact-form" method="post"
+            <input type="hidden" value="{{ faqs.id }}" name="id">
+            <p>
+                <label>Votre Question : </label>
+                <span class="text-danger" >{{ error.title ? error['question_name'] }}</span>
+                <input type="text" value="{{ faqs.question_name }}" name="question_name">
+            </p>
+            <p>
+                <label>Votre Réponse :</label>
+                <span class="text-danger" >{{ error.title ? error['answer_name'] }}</span>
+                <input type="text" value="{{ faqs.answer_name }}" name="answer_name">
+            </p>
+            <p class="full">
+                <button type="submit">Submit</button>
+            </p>
+            </form>
+        </div>
+    </div>
+</div>
