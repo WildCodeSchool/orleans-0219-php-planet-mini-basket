@@ -1,3 +1,7 @@
+/*target slide*/
+li.carousel-news {
+    display: none;
+}
 
 h2 {
     font-size: 3.5em;
@@ -41,6 +45,11 @@ p{
     font-size: 1.4em;
     font-family: ABeeZee;
 }
+
+ body{
+     padding: 0;
+     margin: 0;
+ }
 
 .banner{
     position: relative;
@@ -182,12 +191,106 @@ section{
 
 .card-info{
     max-width: 20rem;
-}
-
-.card {
     background-color: rgba(240, 173, 78, 0.9);
 }
 
+/* ACTIVITIES */
+
+.wrap{
+    margin-bottom: 30px;
+}
+
+.activities{
+    font-size: 5.5em;
+    text-align: center;
+}
+
+.activities-text{
+    padding-bottom: 5vw;
+    text-align: center;
+}
+
+.activities-pictures{
+    height: 20vw;
+    object-fit: cover;
+    width: 100%;
+}
+
+.activities-card{
+    overflow: hidden;
+    padding: 0;
+    perspective: 1000px;
+    border: #f0ad4e solid 2px;
+    background-color: transparent;
+}
+
+.activities-title{
+    position: absolute;
+    font-size: 2.5vw;
+    color: #f0ad4e;
+    font-weight: bold;
+    margin-top: 15vw;
+    text-shadow: 1px 1px 2px dimgrey, 0 0 1em dimgrey, 0 0 0.2em dimgrey;
+}
+
+.wrap:hover .animate{
+    transform: rotateY(180deg);
+    cursor: pointer;
+    overflow: visible;
+}
+
+.animate{
+    transition: 0.7s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.side-a, .side-b{
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+}
+
+.side-a{
+    transform: rotateY(0deg);
+}
+
+.side-b {
+    transform: rotateY(180deg);
+    position: absolute;
+    background-color: #f0ad4e;
+    height: 100%;
+}
+
+.activities-description {
+    text-align: center;
+    padding: 0.5vw;
+    font-size: 1rem;
+}
+
+.activities-section{
+    padding-top: 9vw;
+}
+
+@media screen and (max-width: 1590px) {
+    .activities-section{
+        padding-top: 10vw;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 770px) {
+    .activities-section{
+        padding-top: 25vw;
+    }
+}
+
+@media screen and (max-width: 924px) {
+    .activities-description{
+        font-size: 1.5vw;
+    }
+}
+
+/* END OF ACTIVITIES */
 
 .logo{
     color: black;
