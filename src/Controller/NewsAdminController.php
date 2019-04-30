@@ -56,8 +56,8 @@ class NewsAdminController extends AbstractController
             $news['title'] = $data['title'];
             $news['content'] = $data['content'];
             $newsManager->update($news);
+            header('location:/NewsAdmin/show/'. $id);
         }
-
         return $this->twig->render('NewsAdmin/edit.html.twig', ['news' => $news]);
     }
 }
