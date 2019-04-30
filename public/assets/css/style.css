@@ -1,5 +1,35 @@
+
 h2 {
     font-size: 3.5em;
+}
+
+.logo{
+    color: black;
+    font-weight:700;
+    font-size:30px;
+}
+
+.contact{
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+    width: 65vw;
+    margin-left: 20vw;
+}
+
+.li-contact a:hover{
+    color: #f0ad4e;
+    text-decoration: none;
+}
+
+.fa{
+    color: #f0ad4e;
+    margin-right: 10px;
+    font-size:18px;
 }
 
 p{
