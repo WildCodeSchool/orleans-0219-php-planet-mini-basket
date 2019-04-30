@@ -16,6 +16,7 @@
         <tr>
             <td class="text-dark">{{ content.news_title }}</td>
             <td class="text-dark">{{ content.news_content }}</td>
+            <td><a href="/NewsAdmin/show/{{ content.id }}" class="btn btn-primary">Détail</a></td>
         </tr>
     {% endfor %}
     </tbody>
