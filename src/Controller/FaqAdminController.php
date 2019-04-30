@@ -1,11 +1,11 @@
 <?php
 namespace App\Controller;
-use App\Model\FaqAdminManager;
+use App\Model\FaqManager;
 class FaqAdminController extends AbstractController
 {
     public function index()
     {
-        $faqManager = new FaqAdminManager();
+        $faqManager = new FaqManager();
         $faqs = $faqManager->selectAll();
         return $this->twig->render('FaqAdmin/index.html.twig', ['faqs' => $faqs]);
     }
@@ -16,13 +16,13 @@ class FaqAdminController extends AbstractController
      */
     public function delete(int $id)
     {
-        $faqManager = new FaqAdminManager();
+        $faqManager = new FaqManager();
         $faqManager->delete($id);
         header('Location:/FaqAdmin/index');
     }
     public function show(int $id)
     {
-        $faqManager = new FaqAdminManager();
+        $faqManager = new FaqManager();
         $faqs = $faqManager->selectOneById($id);
         return $this->twig->render('FaqAdmin/show.html.twig', ['faqs' => $faqs]);
     }
