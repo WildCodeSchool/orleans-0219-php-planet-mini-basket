@@ -41,11 +41,15 @@ class PresentationController extends AbstractController
         $historyManager = new HistoryManager();
         $history = $historyManager->selectAll();
 
+        $whatIsItManager = new WhatIsItManager();
+        $whatIsIt = $whatIsItManager->selectAll();
+
         return $this->twig->render(
             'Presentation/index.html.twig',
             ['places' => $places,
             'presentation' => $presentation,
-            'history' => $history]
+            'history' => $history,
+            'whatIsIt' => $whatIsIt]
         );
     }
 }
