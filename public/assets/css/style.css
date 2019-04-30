@@ -2,8 +2,43 @@
 li.carousel-news {
     display: none;
 }
+
 h2 {
     font-size: 3.5em;
+}
+
+.logo{
+    color: black;
+    font-weight:700;
+    font-size:30px;
+}
+
+.contact{
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1vw;
+    letter-spacing: 3px;
+    width: 65vw;
+    margin-left: 20vw;
+}
+p.footer{
+    font-size: 0.90vw;
+}
+.link-contact{
+    font-size: 1vw;
+}
+.li-contact a:hover{
+    color: #f0ad4e;
+    text-decoration: none;
+}
+
+.fa{
+    color: #f0ad4e;
+    margin-right: 10px;
+    font-size:25px;
 }
 
 p{
