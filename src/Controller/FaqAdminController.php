@@ -35,5 +35,4 @@ class FaqAdminController extends AbstractController
         }
         return $this->twig->render('FaqAdmin/add.html.twig', ['error' => $errors]);
     }
-
 }
