@@ -22,6 +22,8 @@ class FaqAdminController extends AbstractController
             $faqs['question_name'] = $_POST['question_name'];
             $faqs['answer_name'] = $_POST['answer_name'];
             $faqManager->update($faqs);
+            header('Location:/FaqAdmin/index/');
+            exit();
         }
         return $this->twig->render('FaqAdmin/edit.html.twig', ['faqs' => $faqs]);
     }
@@ -46,6 +48,7 @@ class FaqAdminController extends AbstractController
                 ];
                 $id = $faqManager->insert($faq);
                 header('Location:/FaqAdmin/index/');
+                exit();
             }
         }
         return $this->twig->render('FaqAdmin/add.html.twig', ['error' => $errors]);
