@@ -11,7 +11,7 @@ namespace App\Controller;
 use App\Model\ActivitiesManager;
 use App\tools\CleanData;
 
-class AdminController extends AbstractController
+class HomeAdminController extends AbstractController
 {
     /**
      * Display admin page
@@ -24,6 +24,6 @@ class AdminController extends AbstractController
     public function index()
     {
 
-        return $this->twig->render('Admin/index.html.twig');
+        return $this->twig->render('HomeAdmin/index.html.twig');
     }
 }
