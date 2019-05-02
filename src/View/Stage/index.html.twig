@@ -27,7 +27,7 @@
                                             class="space">{% if stage.name != 'Mercredi' %}Date de début
                 le {{ stage.start_date|date("d/m/Y") }} à {{ stage.start_time [:5] }}{% endif %}</span></h4>
                                 <h4 class="stage col-12"><i class="fas fa-calendar-alt stage-font-awesome"></i><span
-                                            class="space">{% if stage.name == 'Mercredi' %}Tous les mercredis, hors vacances scolaires et jours fériés {% else %}
+                                            class="space">{% if stage.name == 'Mercredi' %}Tous les mercredis, hors vacances scolaires et jours fériés de 9:00 à 17:00 {% else %}
                                             Date de fin
                                             le {{ stage.end_date|date("d/m/Y") }} à {{ stage.end_time[:5] }}{% endif %}</span>
                                 </h4>
