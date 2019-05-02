@@ -485,3 +485,12 @@ section{
 .presMar i{
     color: #f0ad4e;
 }
+
+.legal{
+    font-size: 5.5em;
+    text-align: center;
+}
+
+.legal-text{
+    font-size: 1em;
+}
