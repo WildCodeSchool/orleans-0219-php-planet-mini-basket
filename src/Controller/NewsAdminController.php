@@ -62,4 +62,11 @@ class NewsAdminController extends AbstractController
         }
         return $this->twig->render('NewsAdmin/edit.html.twig', ['news' => $news]);
     }
+    public function delete(int $id)
+    {
+        $newsmanager = new NewsManager();
+        $newsmanager->delete($id);
+        header('Location:/NewsAdmin/index');
+        exit();
+    }
 }
