@@ -47,6 +47,7 @@ class NewsAdminController extends AbstractController
         $news = $newsManager->selectOneById($id);
         return $this->twig->render('NewsAdmin/show.html.twig', ['news' => $news]);
     }
+
     public function edit(int $id): string
     {
         $newsManager = new NewsManager();
@@ -57,9 +58,21 @@ class NewsAdminController extends AbstractController
             $news['title'] = $data['title'];
             $news['content'] = $data['content'];
             $newsManager->update($news);
-            header('location:/NewsAdmin/show/'. $id);
+            header('location:/NewsAdmin/show/' . $id);
             exit;
         }
         return $this->twig->render('NewsAdmin/edit.html.twig', ['news' => $news]);
+    }
+
+    public function delete(int $id)
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (isset($_POST['delete'])) {
+                $newsmanager = new NewsManager();
+                $newsmanager->delete($id);
+                header('Location:/NewsAdmin/index');
+                exit();
+            }
+        }
     }
 }

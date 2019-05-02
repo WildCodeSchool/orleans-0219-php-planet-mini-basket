@@ -96,6 +96,12 @@ p{
 
 .trainer img {
     width: 84%;
+    height: 75%;
+}
+
+.text-center {
+    padding: 0.8em;
+
 }
 
 
@@ -117,6 +123,7 @@ p{
 
 .trainer .title h3 a {
     color: #000;
+    text-decoration: none;
 }
 
 .trainer .title h3 a:hover, .trainer .title h3 a:focus {
@@ -484,6 +491,15 @@ section{
 
 .presMar i{
     color: #f0ad4e;
+}
+
+.legal{
+    font-size: 5.5em;
+    text-align: center;
+}
+
+.legal-text{
+    font-size: 1em;
 }
 
 .titre-faq{
