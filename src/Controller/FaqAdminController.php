@@ -51,7 +51,7 @@ public function add()
                 $errors['question_name'] = 'Veuillez entrer votre question';
             }
             if (empty($data['answer_name'])) {
-                $errors['answer_name'] = 'Veuillez entre votre réponse';
+                $errors['answer_name'] = 'Veuillez entrer votre réponse';
             } else {
                 $faq = [
                     'question_name' => $data['question_name'],
