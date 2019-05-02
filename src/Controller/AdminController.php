@@ -11,7 +11,6 @@ namespace App\Controller;
 use App\Model\ActivitiesManager;
 use App\tools\CleanData;
 
-
 class AdminController extends AbstractController
 {
     /**
