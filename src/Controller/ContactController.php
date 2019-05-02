@@ -6,6 +6,7 @@
  * Time: 09:36
  */
 namespace App\Controller;
+
 use \Swift_SmtpTransport;
 use \Swift_Mailer;
 use \Swift_Message;
@@ -54,16 +55,16 @@ class ContactController extends AbstractController
                     $errors['email'] = 'Veuillez remplir le champ "E-mail" avec une adresse électronique valide';
                 }
                 if (strlen($cleanPost['lastName'])>30) {
-                    $errors['lastName'] = 'Veuillez remplir le champ "Nom" avec 30 caractères maximum';
+                    $errors['lastName'] = 'Veuillez remplir le champ "Nom" contenant 30 caractères maximum';
                 }
                 if (strlen($cleanPost['firstName'])>30) {
-                    $errors['firstName'] = 'Veuillez remplir le champ "Prénom" avec 30 caractères maximum';
+                    $errors['firstName'] = 'Veuillez remplir le champ "Prénom" contenant 30 caractères maximum';
                 }
                 if (strlen($cleanPost['email'])>20) {
-                    $errors['email'] = 'Veuillez remplir le champ "E-mail" avec 20 caractères maximum';
+                    $errors['email'] = 'Veuillez remplir le champ "E-mail" contenant 20 caractères maximum';
                 }
                 if (strlen($cleanPost['message'])>3000) {
-                    $errors['message'] = 'Veuillez remplir le champ "Description" avec 3000 caractères maximum';
+                    $errors['message'] = 'Veuillez remplir le champ "Description" contenant 3000 caractères maximum';
                 }
                 if (empty($errors)) {
                     try {

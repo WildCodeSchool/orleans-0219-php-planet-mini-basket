@@ -23,11 +23,11 @@ class NewsAdminController extends AbstractController
             $data = $cleanData->trimData();
             $newsManager = new NewsManager();
             if (empty($data['title'])) {
-                $error['title'] = 'Veuillez compléter le champ tite';
+                $error['title'] = 'Veuillez compléter le champ titre';
             }
 
             if (empty($data['content'])) {
-                $error['content'] = 'Veuillez inséré un contenue';
+                $error['content'] = 'Veuillez insérer un contenu';
             } else {
                 $news = [
                     'news_title' => $data['title'],

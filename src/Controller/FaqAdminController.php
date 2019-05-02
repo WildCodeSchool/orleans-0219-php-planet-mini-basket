@@ -1,5 +1,6 @@
 <?php
 namespace App\Controller;
+
 use App\Model\FaqManager;
 use App\tools\CleanData;
 
@@ -10,7 +11,6 @@ class FaqAdminController extends AbstractController
         $faqManager = new FaqManager();
         $faqs = $faqManager->selectAll();
         return $this->twig->render('FaqAdmin/index.html.twig', ['faqs' => $faqs]);
-
     }
 
     public function edit(int $id): string
@@ -40,7 +40,7 @@ class FaqAdminController extends AbstractController
         exit();
     }
 
-public function add()
+    public function add()
     {
         $errors = [];
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -51,7 +51,7 @@ public function add()
                 $errors['question_name'] = 'Veuillez entrer votre question';
             }
             if (empty($data['answer_name'])) {
-                $errors['answer_name'] = 'Veuillez entre votre réponse';
+                $errors['answer_name'] = 'Veuillez entrer votre réponse';
             } else {
                 $faq = [
                     'question_name' => $data['question_name'],
@@ -65,4 +65,3 @@ public function add()
         return $this->twig->render('FaqAdmin/add.html.twig', ['error' => $errors]);
     }
 }
-
