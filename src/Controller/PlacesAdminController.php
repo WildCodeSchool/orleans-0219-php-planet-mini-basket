@@ -18,9 +18,8 @@ use App\Model\WhatIsItManager;
  * Class PlaceController
  *
  */
-class PresentationController extends AbstractController
+class PlacesAdminController extends AbstractController
 {
-
 
     /**
      * Display place listing
@@ -35,21 +34,9 @@ class PresentationController extends AbstractController
         $placeManager = new PlaceManager();
         $places = $placeManager->selectAll();
 
-        $presentationManager = new PresentationManager();
-        $presentation = $presentationManager->selectAll();
-
-        $historyManager = new HistoryManager();
-        $history = $historyManager->selectAll();
-
-        $whatIsItManager = new WhatIsItManager();
-        $whatIsIt = $whatIsItManager->selectAll();
-
         return $this->twig->render(
-            'Presentation/index.html.twig',
-            ['places' => $places,
-            'presentation' => $presentation,
-            'history' => $history,
-            'whatIsIt' => $whatIsIt]
+            'PlacesAdmin/index.html.twig',
+            ['places' => $places]
         );
     }
 }

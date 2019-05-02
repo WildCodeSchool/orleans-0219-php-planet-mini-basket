@@ -1,11 +1,57 @@
+/*target slide*/
+li.carousel-news {
+    display: none;
+}
+.news-carousel{
+    height: 5vw;
+}
+
 h2 {
     font-size: 3.5em;
+}
+
+.logo{
+    color: black;
+    font-weight:700;
+    font-size:30px;
+}
+
+.contact{
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1vw;
+    letter-spacing: 3px;
+    width: 65vw;
+    margin-left: 20vw;
+}
+p.footer{
+    font-size: 0.90vw;
+}
+.link-contact{
+    font-size: 1vw;
+}
+.li-contact{
+    text-decoration: none;
+}
+
+.fa{
+    color: #f0ad4e;
+    margin-right: 10px;
+    font-size:25px;
 }
 
 p{
     font-size: 1.4em;
     font-family: ABeeZee;
 }
+
+ body{
+     padding: 0;
+     margin: 0;
+ }
 
 .banner{
     position: relative;
@@ -50,6 +96,12 @@ p{
 
 .trainer img {
     width: 84%;
+    height: 75%;
+}
+
+.text-center {
+    padding: 0.8em;
+
 }
 
 
@@ -71,6 +123,7 @@ p{
 
 .trainer .title h3 a {
     color: #000;
+    text-decoration: none;
 }
 
 .trainer .title h3 a:hover, .trainer .title h3 a:focus {
@@ -147,12 +200,106 @@ section{
 
 .card-info{
     max-width: 20rem;
-}
-
-.card {
     background-color: rgba(240, 173, 78, 0.9);
 }
 
+/* ACTIVITIES */
+
+.wrap{
+    margin-bottom: 30px;
+}
+
+.activities{
+    font-size: 5.5em;
+    text-align: center;
+}
+
+.activities-text{
+    padding-bottom: 5vw;
+    text-align: center;
+}
+
+.activities-pictures{
+    height: 20vw;
+    object-fit: cover;
+    width: 100%;
+}
+
+.activities-card{
+    overflow: hidden;
+    padding: 0;
+    perspective: 1000px;
+    border: #f0ad4e solid 2px;
+    background-color: transparent;
+}
+
+.activities-title{
+    position: absolute;
+    font-size: 2.5vw;
+    color: #f0ad4e;
+    font-weight: bold;
+    margin-top: 15vw;
+    text-shadow: 1px 1px 2px dimgrey, 0 0 1em dimgrey, 0 0 0.2em dimgrey;
+}
+
+.wrap:hover .animate{
+    transform: rotateY(180deg);
+    cursor: pointer;
+    overflow: visible;
+}
+
+.animate{
+    transition: 0.7s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.side-a, .side-b{
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+}
+
+.side-a{
+    transform: rotateY(0deg);
+}
+
+.side-b {
+    transform: rotateY(180deg);
+    position: absolute;
+    background-color: #f0ad4e;
+    height: 100%;
+}
+
+.activities-description {
+    text-align: center;
+    padding: 0.5vw;
+    font-size: 1rem;
+}
+
+.activities-section{
+    padding-top: 9vw;
+}
+
+@media screen and (max-width: 1590px) {
+    .activities-section{
+        padding-top: 10vw;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 770px) {
+    .activities-section{
+        padding-top: 25vw;
+    }
+}
+
+@media screen and (max-width: 924px) {
+    .activities-description{
+        font-size: 1.5vw;
+    }
+}
+
+/* END OF ACTIVITIES */
 
 .logo{
     color: black;
@@ -194,14 +341,13 @@ section{
     font-size:18px;
 }
 
-.footerDown {
+.footer-copyright {
     background-color: #f0ad4e;
-    padding-top: 5px;
-    text-align: center;
 }
 
-.footer {
-    font-size: 0.8em;
+.footerFont {
+    font-size: 1em;
+    margin-top: 4em;
 }
 
 
@@ -258,8 +404,8 @@ section{
 }
 
 .mapIframe{
-    width: 100%;
-    height: 100%;
+    width: 25vw;
+    height: 17vw;
 }
 
 .presentationModal .row{
@@ -269,6 +415,11 @@ section{
 
 .presentationCard{
     background-color: white;
+}
+
+.card-img-top{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 }
 
 .presentationCardBody{
@@ -293,8 +444,72 @@ section{
 .presentationH2{
     margin-top: 3vw;
     margin-bottom: 1vw;
+
 }
 
 #presentation .presentation{
     font-size: 1em;
+}
+
+@media screen and (max-width: 1076px) {
+    .news-carousel{
+        height: 15vw;
+    }
+}@media screen and (max-width: 730px) {
+    .news-carousel{
+        height: 35vw;
+    }
+}@media screen and (max-width: 450px) {
+    .news-carousel{
+        height: 150vw;
+    }
+}
+
+.btn-presentation{
+    color: black;
+    background-color: #f0ad4e;
+    padding: 0.5rem 2rem;
+}
+.btn-presentation:hover{
+    background-color: #f0ad4e;
+}
+
+.presModalTitle{
+    background-color: #f0ad4e;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.presModalBody{
+    height: 40vw;
+}
+
+.presMar{
+    margin-top: 1vw;
+}
+
+.presMar i{
+    color: #f0ad4e;
+}
+
+.legal{
+    font-size: 5.5em;
+    text-align: center;
+}
+
+.legal-text{
+    font-size: 1em;
+}
+
+.titre-faq{
+    font-size: 5.5em;
+}
+.btn-contact{
+    color: black;
+    background-color: #F0AD4E;
+    border-color: #F0AD4E;
+}
+.btn-contact:hover{
+    background-color: #f09334;
+    border-color: #f09334;
 }

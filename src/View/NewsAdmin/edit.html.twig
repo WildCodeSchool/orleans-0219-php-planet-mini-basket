@@ -1,0 +1,9 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+    {% block content %}
+        <section class="container">
+            <h1 class="text-center">Editer une actualité</h1>
+            {% include 'NewsAdmin/_form.html.twig' %}
+            <a class="btn btn-primary" href="/NewsAdmin/show/{{ news.id }}">Retour</a>
+        </section>
+    {% endblock %}

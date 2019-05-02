@@ -1,16 +1,15 @@
-<form method="post">
 
+<form method="post">
     <input type="hidden" value="{{ news.id }}" name="id">
     <label class="col-form-label text-dark" for="inputDefault">Titre </label>
     <span class="text-danger" >{{ error.title ? error['title'] }}</span>
-    <input type="text" class="form-control" id="inputDefault" name="title">
+    <input type="text" class="form-control" value="{{ news.news_title }}" id="inputDefault" name="title">
 
     <input type="hidden" value="{{ news.id }}" name="id">
-    <label class="col-form-label col-form-label-lg text-dark" for="inputLarge">Contenue</label>
+    <label class="col-form-label col-form-label-lg text-dark" for="inputLarge">Contenu</label>
     <span class="text-danger">{{ error.title ? error['content'] }}</span>
-    <input class="form-control form-control-lg" type="text" value="{{ news.content }}" name="content" id="inputLarge">
+    <input class="form-control form-control-lg" value="{{ news.news_content }}"  name="content" id="inputLarge">
     <div class="row justify-content-center">
         <input type="submit" class="btn btn-primary mt-4 " value="Valider">
     </div>
-
 </form>
