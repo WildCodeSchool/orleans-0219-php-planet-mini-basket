@@ -29,9 +29,7 @@ class FaqManager extends AbstractManager
       
     }
   
-     * @param array $item
-     * @return bool
-     */
+
     public function update(array $faqs):bool
     {
         $statement = $this->pdo->prepare("UPDATE $this->table SET `question_name` = :question_name, `answer_name` = :answer_name WHERE id=:id");

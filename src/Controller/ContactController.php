@@ -6,9 +6,13 @@
  * Time: 09:36
  */
 namespace App\Controller;
+
 use \Swift_SmtpTransport;
+
 use \Swift_Mailer;
+
 use \Swift_Message;
+
 class ContactController extends AbstractController
 {
     public function index()
