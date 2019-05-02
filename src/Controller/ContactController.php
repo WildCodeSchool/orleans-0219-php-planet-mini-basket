@@ -9,6 +9,8 @@ namespace App\Controller;
 use \Swift_SmtpTransport;
 use \Swift_Mailer;
 use \Swift_Message;
+use Exception;
+
 class ContactController extends AbstractController
 {
     public function index()
