@@ -1,83 +1,72 @@
 {% extends 'layout.html.twig' %}
+
+{% block title %}
+Contact
+{% endblock %}
+
 {% block stylesheet %}
-    <link rel="stylesheet" href="/assets/css/contact.css">
+<link rel="stylesheet" href="/assets/css/contact.css">
 {% endblock %}
 
 {% block content %}
-    <div class="section">
-        <div class="container">
+<section>
+    <div class="card">
 
-            <h1 class="brand text-center"><span>Contact</span></h1>
-
-            {% if mailSent is not empty %}
-                <div class="mailSent">{{ mailSent }}</div>
-            {% endif %}
-            {% if mailNotSent is not empty %}
-                <div class="mailNotSent">{{ mailNotSent }}</div>
-            {% endif %}
-
-            <div class="wrapper">
-
-                <div class="company-info">
-                    <h3>Planète Mini Basket</h3>
-
-                    <ul>
-                        <li><i class="fa fa-road"></i> 9 rue Henri Lavedan</li>
-                        <li><i class="fa fa-phone"></i> (33) 238968473</li>
-                        <li><i class="fa fa-envelope"></i> contact@planete-mini-basket.fr</li>
-                    </ul>
+        <h5 class="card-header info-color white-text text-center py-4">
+            <strong>Contactez-Nous</strong>
+        </h5>
+        {% if mailSent is not empty %}
+            <div class="mailSent">{{ mailSent }}</div>
+        {% endif %}
+        {% if mailNotSent is not empty %}
+            <div class="mailNotSent">{{ mailNotSent }}</div>
+        {% endif %}
+        <div class="card-body px-lg-5 pt-0">
+            <form method="post" class="text-center" novalidate>
+                <div class="md-form">
+                    <label for="materialContactFormName">Nom</label>
+                    {% if errors.lastName is defined %}
+                        <div class="formErrors">{{ errors.lastName }}</div>
+                    {% endif %}
+                    <input placeholder="Nom" type="text" id="materialContactFormName" name="lastName" class="form-control" value="{{ values.lastName }}">
                 </div>
-
-                <div class="contact">
-                    <h3>Contactez-Nous !</h3>
-
-                    <form id="contact-form" method="post" action="" novalidate>
-
-                        <div class="full">
-                            <label for="lastName">Nom :</label>
-                            {% if errors.lastName is defined %}
-                                <p class="formErrors">{{ errors.lastName }}</p>
-                            {% endif %}
-                            <input placeholder="Entrez votre Nom" type="text" name="lastName" class="form-control" id="lastName" value="{{ values.lastName }}" required>
-                        </div>
-
-                        <div class="full">
-                            <label for="firstName">Prénom :</label>
-                            {% if errors.firstName is defined %}
-                                <p class="formErrors">{{ errors.firstName }}</p>
-                            {% endif %}
-                            <input placeholder="Entrez votre Prénom" type="text" name="firstName" class="form-control" id="firstName" value="{{ values.firstName }}" required>
-                        </div>
-
-                        <div class="full">
-                            <label for="email">E-mail :</label>
-                            {% if errors.email is defined %}
-                                <p class="formErrors">{{ errors.email }}</p>
-                            {% endif %}
-                            <input placeholder="contact@exemple.fr" type="email" name="email" class="form-control" id="email" value="{{ values.email }}" required>
-                        </div>
-
-
-                        <div class="full">
-                            <label for="message">Message :</label>
-                            {% if errors.message is defined %}
-                                <p class="formErrors">{{ errors.message }}</p>
-                            {% endif %}
-                            <textarea placeholder="Ecrivez-nous quelques lignes..." class="form-control" id="message" name="message" rows="10" required{{ values.message }}></textarea>
-                        </div>
-
-                        <div class="full">
-                            <button type="submit">Envoyez</button>
-                        </div>
-
-                    </form>
-
+                <div class="md-form">
+                    <label for="materialContactFormName">Prénom</label>
+                    {% if errors.firstName is defined %}
+                        <div class="formErrors">{{ errors.firstName }}</div>
+                    {% endif %}
+                    <input placeholder="Prénom" type="text" name="firstName" id="materialContactFormName" class="form-control" value="{{ values.firstName }}">
                 </div>
-
-
-            </div>
-
+                <div class="md-form">
+                    <label for="materialContactFormName">E-mail</label>
+                    {% if errors.email is defined %}
+                        <div class="formErrors">{{ errors.email }}</div>
+                    {% endif %}
+                    <input placeholder="E-mail" type="email" id="materialContactFormEmail" name="email" class="form-control" value="{{ values.email }}">
+                </div>
+                <div class="md-form">
+                    <label for="materialContactFormName">Objet</label>
+                    <select class="mdb-select form-control">
+                        <option value="" disabled>Choisir un option</option>
+                        <option value="1" selected>J'ai une question</option>
+                        <option value="2">Demande d'inscription</option>
+                        <option value="3">Renseignements</option>
+                    </select>
+                </div>
+                <div class="md-form">
+                    <label for="materialContactFormMessage">Message</label>
+                    {% if errors.message is defined %}
+                        <div class="formErrors">{{ errors.message }}</div>
+                    {% endif %}
+                    <input placeholder="Votre message ..." id="materialContactFormMessage" name="message" class="form-control md-textarea" rows="3" value="{{ values.message }}">
+                </div>
+                <button class="btn btn-outline-warning btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Envoyez</button>
+            </form>
         </div>
     </div>
+
+</section>
+
+
 
 {% endblock %}
