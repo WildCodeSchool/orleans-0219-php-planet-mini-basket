@@ -36,7 +36,7 @@
                             <td>{{ faq.question_name }}</td>
                             <td>{{ faq.answer_name }}</td>
 
-                            <td><a class="btn trigger" href="/"><i class="fas fa-pencil-ruler"></i> Éditer</a></td>
+                            <td><a class="btn trigger" href="/FaqAdmin/edit/{{ faq.id }}"><i class="fas fa-pencil-ruler"></i> Éditer</a></td>
                             <td><button type="button" class="btn btn-trigger" data-toggle="modal" data-target="#basicExampleModal{{ faq.id }}">
                                     <i class="fas fa-trash-alt"></i> Supprimer
                                 </button>
