@@ -505,3 +505,12 @@ section{
 .titre-faq{
     font-size: 5.5em;
 }
+.btn-contact{
+    color: black;
+    background-color: #F0AD4E;
+    border-color: #F0AD4E;
+}
+.btn-contact:hover{
+    background-color: #f09334;
+    border-color: #f09334;
+}
